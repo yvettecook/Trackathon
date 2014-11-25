@@ -9,7 +9,6 @@ describe 'On the dashboard page' do
     it 'should have welcome widget' do
       Hackathon.create(name: :september, id: 1 )
       visit '/hackathons/1'
-      save_and_open_page
       expect(page).to have_css('#welcome-widget')
     end
 
