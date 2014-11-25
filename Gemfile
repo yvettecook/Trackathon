@@ -42,3 +42,10 @@ gem 'spring',        group: :development
 
 gem 'rspec-rails', group: :test
 gem 'capybara', group: :test
+
+
+# Dashboard
+
+gem 'dashing-rails'
+gem 'puma'
+gem 'redis'
