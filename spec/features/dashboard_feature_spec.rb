@@ -40,7 +40,7 @@ describe 'Timecop tests for countdown widget' do
 
   before do
     @september = Hackathon.create(name: :september)
-    visit "/hackathons/#{@september.id}"
+    visit "/dashing/dashboards/september"
   end
 
   before do
@@ -52,7 +52,7 @@ describe 'Timecop tests for countdown widget' do
   end
 
   it 'should display the time remaining for the hackathon', js: true do
-    expect(page).to have_content('Time remaining')
+    expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
+    # expect(page).not_to have_errors
   end
-
 end
