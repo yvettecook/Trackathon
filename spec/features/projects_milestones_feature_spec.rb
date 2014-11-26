@@ -77,7 +77,7 @@ describe 'On the project view page' do
       check("product")
       wait_for_ajax
       expect(Project.find_by_name('New Project').product).to eq true
-      expect(Project.find_by_name('Hello').product).to eq false
+      expect(Project.find_by_name('Hello').product).to eq nil
     end
 
   end
