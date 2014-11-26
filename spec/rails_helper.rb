@@ -6,13 +6,7 @@ require 'rspec/rails'
 
 require 'capybara/rspec'
 require 'capybara/rails'
-# require 'capybara/poltergeist'
-# require 'capybara/webkit/matchers'
 require 'support/database_cleaner'
-
-# Capybara.register_driver :poltergeist do |app|
-#   Capybara::Poltergeist::Driver.new(app, {extensions: ["vendor/poltergeist/bind.js"]})
-# end
 
 Capybara.javascript_driver = :selenium
 # Add additional requires below this line. Rails is not loaded until this point!
@@ -60,6 +54,5 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 
-  # config.include(Capybara::Webkit::RspecMatchers, :type => :feature)
 
 end
