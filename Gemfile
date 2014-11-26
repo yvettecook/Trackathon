@@ -42,7 +42,10 @@ gem 'spring',        group: :development
 
 gem 'rspec-rails', group: :test
 gem 'capybara', group: :test
-
+gem 'timecop', group: :test
+gem 'database_cleaner', group: :test
+gem 'selenium-webdriver', group: :test
+gem 'jasmine-rails', group: [:development, :test]
 
 # Dashboard
 
@@ -50,14 +53,7 @@ gem 'dashing-rails'
 gem 'puma'
 gem 'redis'
 gem 'launchy'
-gem 'database_cleaner'
 
 group :test, :development do
   gem 'byebug'
-end
-
-group :test do
-    # gem 'poltergeist'
-    gem 'selenium-webdriver'
-    # gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end

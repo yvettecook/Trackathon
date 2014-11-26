@@ -16,3 +16,6 @@ class Dashing.Clock extends Dashing.Widget
 
   formatTime: (i) ->
     if i < 10 then "0" + i else i
+
+  truth: ->
+    true

@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount Dashing::Engine, at: Dashing.config.engine_path
   resources :hackathons, shallow: true do
     resources :projects
