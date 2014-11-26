@@ -13,4 +13,10 @@ describe ('Countdown', function() {
     expect(clock.truth()).toBe(true);
   })
 
+  it("has an end time", function() {
+    clock = new Dashing.Clock;
+    clock.endTime()
+    expect(clock.)
+  })
+
 });
