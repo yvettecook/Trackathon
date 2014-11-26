@@ -45,6 +45,7 @@ gem 'capybara', group: :test
 gem 'timecop', group: :test
 gem 'database_cleaner', group: :test
 gem 'selenium-webdriver', group: :test
+gem 'jasmine-rails', group: [:development, :test]
 
 # Dashboard
 
