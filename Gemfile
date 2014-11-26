@@ -49,3 +49,14 @@ gem 'capybara', group: :test
 gem 'dashing-rails'
 gem 'puma'
 gem 'redis'
+gem 'launchy'
+gem 'database_cleaner'
+
+group :test, :development do
+  gem 'byebug'
+end
+
+group :test do
+    gem 'poltergeist'
+    gem 'phantomjs', :require => 'phantomjs/poltergeist'
+end

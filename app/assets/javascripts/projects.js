@@ -37,7 +37,7 @@
 // });
 
 $(document).ready(function() {
-
+	var project 
 	$('#product').on('click', function() {
 	  var checked; 
 	  if ($(this).is(':checked')) {
@@ -47,7 +47,7 @@ $(document).ready(function() {
 	  } 
 	  $.ajax({
 	      type: "GET",
-	      url: "/projects/1/edit",
+	      url: "/projects/" + $(this).data('post-id') + "/edit",
 	      data: { id: $(this).data('post-id'), product: checked }
 	   });     
 	});

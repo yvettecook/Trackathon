@@ -1,3 +1,5 @@
+require 'byebug'
+
 class ProjectsController < ApplicationController
 
   def show
@@ -5,6 +7,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
+    byebug
   	@project = Project.find(params[:id])
   	@project.update(params.permit(:product))
   	render 'new'
