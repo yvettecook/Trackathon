@@ -2,8 +2,8 @@ require 'rails_helper'
 
 describe 'On the dashboard page' do
     before do
-      Hackathon.create(name: :september, id: 1 )
-      visit '/hackathons/1'
+      @september = Hackathon.create(name: :september)
+      visit "/hackathons/#{@september.id}"
     end
 
   context 'welcome widget' do
@@ -34,5 +34,25 @@ describe 'On the dashboard page' do
 
   end
 
+end
+
+describe 'Timecop tests for countdown widget' do
+
+  before do
+    @september = Hackathon.create(name: :september)
+    visit "/hackathons/#{@september.id}"
+  end
+
+  before do
+    Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
+  end
+
+  after do
+    Timecop.return
+  end
+
+  it 'should display the time remaining for the hackathon', js: true do
+    expect(page).to have_content('Time remaining')
+  end
 
 end

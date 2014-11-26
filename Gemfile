@@ -42,7 +42,10 @@ gem 'spring',        group: :development
 
 gem 'rspec-rails', group: :test
 gem 'capybara', group: :test
-
+gem 'timecop', group: :test
+gem 'poltergeist', group: :test
+gem 'database_cleaner', group: :test
+gem 'jasmine-rails', group: :test
 
 # Dashboard
 
