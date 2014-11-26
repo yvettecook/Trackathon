@@ -17,6 +17,10 @@ class Dashing.Countdown extends Dashing.Widget
   currentTime: =>
     now = new Date()
 
+  endTime: =>
+    endTime = 'Fri Dec 05 2014 17:00:00 GMT+0000 (GMT)'
+
+
   formatTime: (i) ->
     if i < 10 then "0" + i else i
 
