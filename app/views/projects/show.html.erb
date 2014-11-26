@@ -1,13 +1,10 @@
 <%= @project.name %>
 
-<ul>
-  <li><a href="#" id="design">Design</a></li>
-  <li><a href="#" id="frontdev">Front-end Development</a></li>
-  <li><a href="#" id="backdev">Back-end Development</a></li>
-  <li><a href="#" id="presentation">Presentation</a></li>
-</ul>
 
-<form action="post" id="milestones">
-<input type="checkbox" name="product" value="product" id="product" >Product
-
+<form action="post">
+	<input type="checkbox" class="milestone" name="product" value="product" id="product" >Product<br>
+	<input type="checkbox" class="milestone" name="design" value="design" id="design" >Design<br>
+	<input type="checkbox" class="milestone" name="frontdev" value="frontdev" id="frontdev" >Front-end Development<br>
+	<input type="checkbox" class="milestone" name="backdev" value="backdev" id="backdev" >Back-end Development<br>
+	<input type="checkbox" class="milestone" name="presentation" value="presentation" id="presentation" >Presentation<br>
 </form>

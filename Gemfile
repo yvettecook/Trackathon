@@ -57,6 +57,7 @@ group :test, :development do
 end
 
 group :test do
-    gem 'poltergeist'
-    gem 'phantomjs', :require => 'phantomjs/poltergeist'
+    # gem 'poltergeist'
+    gem 'selenium-webdriver'
+    # gem 'phantomjs', :require => 'phantomjs/poltergeist'
 end
