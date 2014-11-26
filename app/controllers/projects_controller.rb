@@ -18,8 +18,5 @@ class ProjectsController < ApplicationController
   end
 
 
-def project_params
-	# params.require(:product).
-end
 
 end

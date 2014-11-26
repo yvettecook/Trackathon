@@ -8,7 +8,7 @@
   <li><a href="#" id="presentation">Presentation</a></li>
 </ul>
 
-<form action="">
-<input type="checkbox" name="product" value="product" id="product">Product
+<form action="post">
+<input type="checkbox" name="product" value="product" id="product" <%= "checked" if @project.product %>>Product
 
 </form>
