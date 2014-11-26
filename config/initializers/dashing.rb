@@ -39,7 +39,7 @@ Dashing.configure do |config|
   # config.engine_path = '/dashing'
 
   # The dashboards views path used to find dashboards.
-  # config.dashboards_views_path = -> { Rails.root.join('app', 'views', 'dashing', 'dashboards') }
+  # config.dashboards_views_path = -> { Rails.root.join('app', 'views', 'hackathons') }
 
   # The Dashing layout used to display metrics.
   # config.dashboard_layout_path = 'dashing/dashboard'
