@@ -9,14 +9,20 @@ describe ('Countdown', function() {
   });
 
   it("can generate a new clock", function() {
-    clock = new Dashing.Clock;
+    clock = new Dashing.Countdown;
     expect(clock.truth()).toBe(true);
-  })
+  });
 
-  it("has an end time", function() {
-    clock = new Dashing.Clock;
-    clock.endTime()
-    expect(clock.)
-  })
+  it("has a current time", function() {
+    clock = new Dashing.Countdown;
+    var now = new Date()
+    expect(clock.currentTime()).toEqual(now)
+  });
+
+  // xit("has an end time", function() {
+  //   clock = new Dashing.Countdown;
+  //   clock.endTime()
+  //   expect(clock.)
+  // });
 
 });

@@ -1,9 +1,9 @@
 class Dashing.Countdown extends Dashing.Widget
 
   ready: ->
-    setInterval(@startTime, 500)
+    setInterval(@startCountdown, 500)
 
-  startTime: =>
+  startCountdown: =>
     today = new Date()
 
     h = today.getHours()
@@ -13,6 +13,9 @@ class Dashing.Countdown extends Dashing.Widget
     s = @formatTime(s)
     @set('time', h + ":" + m + ":" + s)
     @set('date', today.toDateString())
+
+  currentTime: =>
+    now = new Date()
 
   formatTime: (i) ->
     if i < 10 then "0" + i else i
