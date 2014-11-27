@@ -41,6 +41,11 @@ describe 'On the dashboard page' do
     it 'should have a project progress widget' do
       expect(page).to have_css('#project-progress-widget')
     end
+
+    it 'should have a title of project progress' do
+      expect(page).to have_css('#project-progress-widget[data-title="Seans Jumper"]')
+    end
+
   end
 
 end
