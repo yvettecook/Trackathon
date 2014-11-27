@@ -3,10 +3,10 @@ require 'rails_helper'
 
 describe 'On the dashboard page' do
 
-  let(:september) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
-
   before do
-    visit "/hackathons/#{september.id}"
+    @september = Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")
+    @september.projects.create(name: 'Trackathon')
+    visit "/hackathons/#{@september.id}"
   end
 
   context 'welcome widget' do
@@ -32,7 +32,7 @@ describe 'On the dashboard page' do
     end
 
     it 'should be able to read the time from the database' do
-      expect(september.end_time).to eq "05-Dec-2014 17:00:00"
+      expect(@september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
     it 'should exctract the finish time of the hackathon from the database ' do
@@ -47,16 +47,16 @@ describe 'On the dashboard page' do
       expect(page).to have_css('#project-progress-widget')
     end
 
-    it 'should have a title of project progress' do
-      expect(page).to have_css('#project-progress-widget[data-title="Seans Jumper"]')
-    end
-
     it 'display the title of the widget on the screen', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Seans Jumper')
+      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
     end
 
     it 'should display the completed project percentage', js: true do
       expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
+    end
+
+    it 'should display the project name from the database', js: true do
+      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
     end
 
   end
