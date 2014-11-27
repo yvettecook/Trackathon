@@ -6,5 +6,9 @@ class HackathonsController < ApplicationController
     redirect_to '/dashing/dashboards/september'
   end
 
+  def new
+  	@hackathon = Hackathon.new
+  end
+
 
 end

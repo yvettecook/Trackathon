@@ -1,0 +1,7 @@
+<h2>Create Your Hackathon</h2>
+
+<%= form_for Hackathon.new do |f| %>
+	<%= f.label :hackathon_name %>
+	<%= f.text_field :name %>
+	<%= f.submit %>
+<% end %>
