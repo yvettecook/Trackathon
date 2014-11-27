@@ -3,7 +3,7 @@ require 'rails_helper'
 
 describe 'On the dashboard page' do
 
-  let(:september) { Hackathon.create(name: "september", endTime: "05-Dec-2014 17:00:00") }
+  let(:september) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
 
   before do
     visit "/hackathons/#{september.id}"
@@ -32,11 +32,11 @@ describe 'On the dashboard page' do
     end
 
     it 'should be able to read the time from the database' do
-      expect(september.endTime).to eq "05-Dec-2014 17:00:00"
+      expect(september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
     it 'should exctract the finish time of the hackathon from the database ' do
-      expect(page).to have_css('[data-end="05-Dec-2014 17:00:00"]')
+      expect(page).to have_css('[data-end="2014-12-05 17:00:00 UTC"]')
     end
 
   end
@@ -45,7 +45,7 @@ end
 
 xdescribe 'Timecop tests for countdown widget' do
 
-  let(:hackathon) { Hackathon.create(name: "september", endTime: "05-Dec-2014 17:00:00") }
+  let(:hackathon) { Hackathon.create(name: "september", end_time: "05-Dec-2014 17:00:00") }
 
   before do
     visit "/dashing/dashboards/september"

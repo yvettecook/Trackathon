@@ -3,7 +3,7 @@
 <% end %>
 
 <% @name = Hackathon.last.name %>
-<% @endTime = Hackathon.last.endTime %>
+<% @end_time = Hackathon.last.end_time %>
 
 <div class="gridster">
   <ul>
@@ -17,7 +17,7 @@
     </li> -->
 
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @endTime %>"></div>
+      <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @end_time %>"></div>
       <i class="icon-time icon-background"></i>
     </li>
 
