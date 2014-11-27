@@ -47,17 +47,21 @@ describe 'On the dashboard page' do
       expect(page).to have_css('#project-progress-widget')
     end
 
-    it 'display the title of the widget on the screen', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
+    # it 'display the title of the widget on the screen', js: true do
+    #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
+    # end
+
+    it 'should display the starting project percentage', js: true do
+      expect(page.find('#project-progress-widget .project')[:'data-bind-value']).to equal('0')
     end
 
-    it 'should display the completed project percentage', js: true do
-      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
-    end
+    # it 'should display the project name from the database', js: true do
+    #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
+    # end
 
-    it 'should display the project name from the database', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
-    end
+    # it 'should display the current project completion percentage' do
+
+    # end
 
   end
 

@@ -1,17 +1,17 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-//= require_self
-
+/*!jQuery Knob*/
+/**
+* Downward compatible, touchable dial
+*
+* Version: 1.2.0 (15/07/2012)
+* Requires: jQuery v1.7+
+*
+* Copyright (c) 2012 Anthony Terrien
+* Under MIT and GPL licenses:
+*  http://www.opensource.org/licenses/mit-license.php
+*  http://www.gnu.org/licenses/gpl.html
+*
+* Thanks to vor, eskimoblood, spiffistan, FabrizioC
+*/
 $(function () {
 
     /**
