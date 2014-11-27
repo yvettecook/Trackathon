@@ -46,12 +46,12 @@ describe 'On the dashboard page' do
       expect(page).to have_css('#project-progress-widget[data-title="Seans Jumper"]')
     end
 
-    it 'display the title of the widget on the screen', js:true do
+    it 'display the title of the widget on the screen', js: true do
       expect(page.find('#project-progress-widget h1')).to have_content('Seans Jumper')
     end
 
-    xit 'should display the completed project percentage', js:true do
-      expect((page.find('#project-progress-widget input')).getAttribute('data-bind-value')).to equal('20')
+    it 'should display the completed project percentage', js: true do
+      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
     end
 
   end
