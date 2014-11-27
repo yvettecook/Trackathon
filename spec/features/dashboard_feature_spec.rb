@@ -36,6 +36,13 @@ describe 'On the dashboard page' do
 
   end
 
+  context 'project progress widget' do
+
+    it 'should have a project progress widget' do
+      expect(page).to have_css('#project-progress-widget')
+    end
+  end
+
 end
 
 describe 'Timecop tests for countdown widget' do
