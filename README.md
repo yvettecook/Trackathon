@@ -1,28 +1,69 @@
-== README
+## Trackathon
+An app for giving an overview of projects status' during a hackathon
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+### Context
+This was built as our final project at [Maker's Academy](www.makersacademy.com), over two weeks of blood, sweat, tears, sweary commits and high-fives.
+
+The project was pitched by [Spike](https://github.com/spike01).
+
+
+### Team
+
+* Alex Fakhri: [alexfakhri](https://github.com/alexfakhri)
+* Camilla van Klinken: [camillavk](https://github.com/camillavk)
+* Ella Schofield: [ellanancyfay](https://github.com/EllaNancyFay)
+* Victoria Barr: [barr-code](https://github.com/barr-code)
+* Yvette Cook: [yvettecook](https://github.com/yvettecook)
+
+### Tools
 
 * Ruby version
-
+* Gems - development
+* Gems - testing
 * System dependencies
+
+* Dashing-Rails
+
+For more information see [dashing.io](http://dashing.io/)
+
+
+### Installation
+
+`git clone`
+`bundle install`
 
 * Configuration
 
-* Database creation
+secrets.yml - create and populate
 
-* Database initialization
+* Database creation & initialization
+
+`bin/rake db:create db:migrate`
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+
+Jasmine Tests:
+
+* either http://localhost:3000/specs or
+
+`$ RAILS_ENV=test bundle exec rake spec:javascript`
 
 * Deployment instructions
 
-* ...
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+### Learnings
+
+
+
+### Thanks to
+
+* Leo
+* Dave
+* Spike
+
+* All the team at Makers Academy
