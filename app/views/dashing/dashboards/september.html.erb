@@ -1,22 +1,23 @@
 <% content_for :title do %>
-  September's super sweet dashboard
+  Trackathon dashboard
 <% end %>
 
-<% @name = Hackathon.first.name %>
+<% @name = Hackathon.last.name %>
+<% @endTime = Hackathon.last.endTime %>
 
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="Hello <%= @name.capitalize %>" data-text="This is your shiny new dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+      <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="Hello <%= @name.capitalize %>" data-text="This is your hackathon dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
+    <!-- <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
       <div id="clock-widget" data-view="Clock"></div>
       <i class="icon-time icon-background"></i>
-    </li>
+    </li> -->
 
     <li data-row="2" data-col="3" data-sizex="1" data-sizey="1">
-      <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-finishtime="05-Dec-2014 17:00:00"></div>
+      <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @endTime %>"></div>
       <i class="icon-time icon-background"></i>
     </li>
 

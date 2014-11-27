@@ -1,10 +1,13 @@
 require 'rails_helper'
 
+
 describe 'On the dashboard page' do
-    before do
-      @september = Hackathon.create(name: :september)
-      visit "/hackathons/#{@september.id}"
-    end
+
+  let(:september) { Hackathon.create(name: "september", endTime: "05-Dec-2014 17:00:00") }
+
+  before do
+    visit "/hackathons/#{september.id}"
+  end
 
   context 'welcome widget' do
 
@@ -13,8 +16,6 @@ describe 'On the dashboard page' do
     end
 
     it 'should have a title of hello' do
-      Hackathon.create(name: :september, id: 1 )
-      visit '/hackathons/1'
       expect(page).to have_css('#welcome-widget[data-title="Hello September"]')
     end
 
@@ -30,18 +31,23 @@ describe 'On the dashboard page' do
       expect(page).to have_css('#countdown-widget[data-title="Time remaining"]')
     end
 
-    it 'should have the finish time of the hackathon' do
-      expect(page).to have_css('#countdown-widget[data-finishtime="05-Dec-2014 17:00:00"]')
+    it 'should be able to read the time from the database' do
+      expect(september.endTime).to eq "05-Dec-2014 17:00:00"
+    end
+
+    it 'should exctract the finish time of the hackathon from the database ' do
+      expect(page).to have_css('[data-end="05-Dec-2014 17:00:00"]')
     end
 
   end
 
 end
 
-describe 'Timecop tests for countdown widget' do
+xdescribe 'Timecop tests for countdown widget' do
+
+  let(:hackathon) { Hackathon.create(name: "september", endTime: "05-Dec-2014 17:00:00") }
 
   before do
-    @september = Hackathon.create(name: :september)
     visit "/dashing/dashboards/september"
   end
 
@@ -57,4 +63,5 @@ describe 'Timecop tests for countdown widget' do
     expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
     # expect(page).not_to have_errors
   end
+
 end

@@ -26,4 +26,6 @@ describe ('Countdown', function() {
     expect(clock.endTime()).toEqual('Fri Dec 05 2014 17:00:00 GMT+0000 (GMT)')
   });
 
+
+
 });
