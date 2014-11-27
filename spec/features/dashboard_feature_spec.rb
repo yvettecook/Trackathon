@@ -41,6 +41,26 @@ describe 'On the dashboard page' do
 
   end
 
+  context 'project progress widget' do
+
+    it 'should have a project progress widget' do
+      expect(page).to have_css('#project-progress-widget')
+    end
+
+    it 'should have a title of project progress' do
+      expect(page).to have_css('#project-progress-widget[data-title="Seans Jumper"]')
+    end
+
+    it 'display the title of the widget on the screen', js: true do
+      expect(page.find('#project-progress-widget h1')).to have_content('Seans Jumper')
+    end
+
+    it 'should display the completed project percentage', js: true do
+      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
+    end
+
+  end
+
 end
 
 xdescribe 'Timecop tests for countdown widget' do
@@ -65,3 +85,5 @@ xdescribe 'Timecop tests for countdown widget' do
   end
 
 end
+
+
