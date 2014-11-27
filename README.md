@@ -45,6 +45,8 @@ secrets.yml - create and populate
 
 Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 
+To run non JavaScript tests use: rspec spec -t ~js
+
 Jasmine Tests:
 
 * either http://localhost:3000/specs or
