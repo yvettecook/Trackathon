@@ -33,6 +33,9 @@ For more information see [dashing.io](http://dashing.io/)
 `git clone`
 `bundle install`
 
+Ensure you have PostgresQL installed (link)
+Install Redis (this should happen on Gemfile - why doesn't it?)
+
 * Configuration
 
 secrets.yml - create and populate
@@ -41,9 +44,13 @@ secrets.yml - create and populate
 
 `bin/rake db:create db:migrate`
 
+
+
 * How to run the test suite
 
+
 Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+bin/rake RAILS_ENV=test db:create db:migrate
 
 * Deployment instructions
 
