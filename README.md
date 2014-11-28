@@ -87,5 +87,6 @@ Jasmine Tests:
 * Leo
 * Dave
 * Spike
+* Sam
 
 * All the team at Makers Academy
