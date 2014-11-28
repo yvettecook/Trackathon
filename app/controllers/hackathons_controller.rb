@@ -12,7 +12,7 @@ class HackathonsController < ApplicationController
 
   def create
   	@hackathon = Hackathon.create(params.require(:hackathon).permit(:name, :end_time))
-  	redirect_to '/dashing/dashboards/september'
+  	redirect_to '/dashing/dashboards/september' # hard coded
   end
 
 

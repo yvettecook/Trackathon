@@ -40,11 +40,12 @@ gem 'spring',        group: :development
 
 # Testing
 
-gem 'rspec-rails', group: :test
+gem 'rspec-rails', group: :test # put all in group test
 gem 'capybara', group: :test
 gem 'timecop', group: :test
 gem 'database_cleaner', group: :test
 gem 'selenium-webdriver', group: :test
+gem 'chromedriver-helper', group: :test
 gem 'jasmine-rails', group: [:development, :test]
 
 # Dashboard
