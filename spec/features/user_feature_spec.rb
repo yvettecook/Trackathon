@@ -2,11 +2,12 @@ require 'rails_helper'
 
 describe 'The user journey' do
 
-  context 'on the homepage the user' do
     before do
-      Hackathon.create(name: "September", end_time: "2014-12-05 17:00:00 UTC")
+      @hackathon = Hackathon.create(name: "September", end_time: "2014-12-05 17:00:00 UTC")
       visit '/'
     end
+
+  context 'on the homepage the user' do
 
     it 'should see Welcome to the Hackathon Tracker' do
       expect(page).to have_content 'Welcome to the Hackathon Tracker'
@@ -30,6 +31,15 @@ describe 'The user journey' do
       expect(current_path).to eq "/dashing/dashboards/september"
     end
 
+  end
+
+  context 'on the project page' do
+
+    it 'has a link to the hackathon dashboard' do
+      @project = Project.create(name: "Pringle", hackathon_id: "#{@hackathon.id}")
+      visit "/projects/#{@project.id}"
+      expect(page).to have_link 'Hackathon dashboard'
+    end
 
   end
 

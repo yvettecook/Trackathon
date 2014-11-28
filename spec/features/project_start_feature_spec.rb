@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "New project page" do
 
   before do
-    @september = Hackathon.create(name: 'September')
+    @september = Hackathon.create(name: 'September', end_time: "2014-12-05 17:00:00 UTC")
     visit "/hackathons/#{@september.id}/projects/new"
   end
 
