@@ -4,7 +4,8 @@ Dashing.scheduler.every '1s' do
 end
 
 def get_project_status
-	project = Project.last.product
-	return 0 if project.nil? || project == false
-	return 20 if !project.nil?
+	project = Project.last
+	product_status = project.product
+	return 0 if product_status.nil? || product_status == false
+	return 20 if product_status == true
 end
