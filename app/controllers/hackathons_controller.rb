@@ -2,6 +2,7 @@ class HackathonsController < ApplicationController
 
   def show
     @hackathon = Hackathon.find(params[:id])
+    # @project = Project.find(params[:hackathon_id])
     @name = @hackathon.name
     redirect_to '/dashing/dashboards/september'
   end
