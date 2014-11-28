@@ -50,7 +50,7 @@ gem 'jasmine-rails', group: [:development, :test]
 # Dashboard
 
 gem 'dashing-rails'
-gem 'puma'
+# gem 'puma'
 gem 'redis'
 gem 'launchy'
 gem 'rails_12factor'
