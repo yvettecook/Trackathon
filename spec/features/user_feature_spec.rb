@@ -33,12 +33,19 @@ describe 'The user journey' do
 
   end
 
-  context 'on the project page' do
+  context 'The project page' do
 
     it 'has a link to the hackathon dashboard' do
       @project = Project.create(name: "Pringle", hackathon_id: "#{@hackathon.id}")
       visit "/projects/#{@project.id}"
       expect(page).to have_link 'Hackathon dashboard'
+    end
+
+    it 'redirects to the hackathon dashboard when clicked', js: true do
+      @project = Project.create(name: "Pringle", hackathon_id: "#{@hackathon.id}")
+      visit "/projects/#{@project.id}"
+      click_link 'Hackathon dashboard'
+      expect(page.find('#project-progress-widget h1')).to have_content('Pringle')
     end
 
   end
