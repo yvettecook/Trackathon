@@ -21,4 +21,10 @@ describe "New project page" do
     expect(Project.all.count).to eq 1 
   end
 
+  it "should redirect to the project view page when a project's created" do
+    fill_in :project_name, with: 'Robot Army'
+    click_on 'Create'
+    expect(current_path).to eq '/projects/2'
+  end
+
 end
