@@ -3,11 +3,16 @@ Dashing.configure do |config|
   # Scheduler instance.
   # config.scheduler = ::Rufus::Scheduler.new
 
+  # uri = URI.parse(ENV["REDISTOGO_URL"])
+  # REDIS = Redis.new(:url => ENV['REDISTOGO_URL'])
   # Redis credentials.
+
+  ENV["REDISTOGO_URL"] = "http://dashing-trackathon.herokuapp.com"
+
   # See https://devcenter.heroku.com/articles/redistogo to configure redis for heroku.
-  # config.redis_host     = '127.0.0.1'
-  # config.redis_port     = '6379'
-  # config.redis_password = nil
+  config.redis_host     = URI.parse(ENV["REDISTOGO_URL"]).host
+  config.redis_port     = URI.parse(ENV["REDISTOGO_URL"]).port
+  config.redis_password = URI.parse(ENV["REDISTOGO_URL"]).password
   # config.redis_timeout  = 3
 
   # Redis namespace when pushing new data.

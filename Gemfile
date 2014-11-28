@@ -53,6 +53,7 @@ gem 'dashing-rails'
 gem 'puma'
 gem 'redis'
 gem 'launchy'
+gem 'rails_12factor'
 
 group :test, :development do
   gem 'byebug'
