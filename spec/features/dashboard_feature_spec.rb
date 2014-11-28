@@ -66,7 +66,7 @@ end
 
 describe 'Timecop tests for countdown widget' do
 
-  let(:hackathon) { Hackathon.create(name: "september", end_time: "05-Dec-2014 17:00:00") }
+  let(:hackathon) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
 
   before do
     visit "/dashing/dashboards/september"
