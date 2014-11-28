@@ -1,0 +1,5 @@
+<%= form_for [@hackathon, @project] do |f| %>
+  <%= f.label :project_name %>
+  <%= f.text_area :name %>
+  <%= f.submit "Create" %>
+<% end %>

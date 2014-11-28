@@ -52,6 +52,27 @@ secrets.yml - create and populate
 Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
 bin/rake RAILS_ENV=test db:create db:migrate
 
+* Configuration
+
+secrets.yml - create and populate
+
+* Database creation & initialization
+
+`bin/rake db:create db:migrate`
+
+* How to run the test suite
+
+Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+
+To run non JavaScript tests use: rspec spec -t ~js
+
+Jasmine Tests:
+
+* either http://localhost:3000/specs or
+
+`$ RAILS_ENV=test bundle exec rake spec:javascript`
+
+
 * Deployment instructions
 
 

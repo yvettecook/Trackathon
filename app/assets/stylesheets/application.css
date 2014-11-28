@@ -13,3 +13,139 @@
  *= require_tree .
  *= require_self
  */
+
+ /*GOOGLE FONTS*/
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:700,600,400);
+
+ /*body*/
+ body {
+   background-color: #272727;
+   max-width: 1280px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  PROJECT TILE STYLING  */
+#title_tile {
+  box-sizing: border-box;
+  height: 150px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: hotpink;
+}
+
+#product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
+  box-sizing: border-box;
+  height: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+  h3 {
+    margin-top: 50%;
+    margin-bottom: 0;
+  }
+
+  .milestone {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+
+#product_tile {
+  background-color: #FF003C;
+}
+
+#design_tile {
+  background-color: #FF8A00;
+}
+
+#frontdev_tile {
+  background-color: #88C100;
+}
+
+#backdev_tile {
+  background-color: #00C176;
+}
+
+#presentation_tile {
+  background-color: #FABE28;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+	width: 100%;
+}
+.span_4_of_5 {
+	width: 79.84%;
+}
+.span_3_of_5 {
+	width: 59.68%;
+}
+.span_2_of_5 {
+	width: 39.52%;
+}
+.span_1_of_5 {
+	width: 19.36%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_5_of_5 {
+		width: 100%;
+	}
+	.span_4_of_5 {
+		width: 100%;
+	}
+	.span_3_of_5 {
+		width: 100%;
+	}
+	.span_2_of_5 {
+		width: 100%;
+	}
+	.span_1_of_5 {
+		width: 100%;
+	}
+}
