@@ -51,11 +51,8 @@ describe 'On the dashboard page' do
     #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
     # end
 
-    xit 'should display the completed project percentage', js: true do
-      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
-    end
 
-    xit 'should display the project name from the database', js: true do
+    it 'should display the project name from the database', js: true do
       expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
     end
 
@@ -67,7 +64,7 @@ describe 'On the dashboard page' do
 
 end
 
-xdescribe 'Timecop tests for countdown widget' do
+describe 'Timecop tests for countdown widget' do
 
   let(:hackathon) { Hackathon.create(name: "september", end_time: "05-Dec-2014 17:00:00") }
 
