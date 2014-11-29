@@ -23,6 +23,15 @@ describe 'on the dashboard page' do
 			expect(page.find('#new-project-widget h1')).to have_content('Add a New Project')
 		end
 
+		it 'should have a link to the project page', js: true do
+			expect(page).to have_css('#add')
+	  end
+
+		it 'should redirect to the new project page when clicked' do
+			click_link('add')
+			expect(current_path).to eq "/hackathons/#{september.id}/projects/new"
+		end
+
 	end
 
 end
