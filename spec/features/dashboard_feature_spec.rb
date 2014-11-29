@@ -35,7 +35,7 @@ describe 'On the dashboard page' do
       expect(@september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
-    it 'should exctract the finish time of the hackathon from the database ' do
+    it 'should extract the finish time of the hackathon from the database ' do
       expect(page).to have_css('[data-end="2014-12-05 17:00:00 UTC"]')
     end
 
