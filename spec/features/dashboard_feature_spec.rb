@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-
 describe 'On the dashboard page' do
 
+  let!(:september){Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")}
+  let!(:trackathon){september.projects.create(name: 'Trackathon')}
+
   before do
-    @september = Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")
-    @september.projects.create(name: 'Trackathon')
-    visit "/hackathons/#{@september.id}"
+    visit "/hackathons/#{september.id}"
   end
 
   context 'welcome widget' do
@@ -32,7 +32,7 @@ describe 'On the dashboard page' do
     end
 
     it 'should be able to read the time from the database' do
-      expect(@september.end_time).to eq "05-Dec-2014 17:00:00"
+      expect(september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
     it 'should exctract the finish time of the hackathon from the database ' do
@@ -44,50 +44,50 @@ describe 'On the dashboard page' do
   context 'project progress widget' do
 
     it 'should have a project progress widget' do
-      expect(page).to have_css('#project-progress-widget')
+      expect(page).to have_css("#project-progress-widget#{trackathon.id}")
     end
 
-    # it 'display the title of the widget on the screen', js: true do
-    #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
-    # end
+    it 'display the title of the widget on the screen', js: true do
+      expect(page.find("#project-progress-widget#{trackathon.id} h1")).to have_content('Trackathon')
+    end
+
+
+    it 'should display the project name from the database', js: true do
+      expect(page.find("#project-progress-widget#{trackathon.id} h1")).to have_content('Trackathon')
+    end
+
+    it 'should display the starting project percentage', js: true do
+      expect(page.find("#project-progress-widget#{trackathon.id} .project").value).to eq('0')
+    end
 
     xit 'should display the completed project percentage', js: true do
-      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
-    end
-
-    xit 'should display the project name from the database', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
-    end
-
-    xit 'should display the starting project percentage', js: true do
-      expect(page.find('#project-progress-widget .project')[:'data-bind-value']).to equal('0')
+      expect(page).to have_css('#project-progress-widget1 input.project[data-bind-value="20"]')
     end
 
   end
 
 end
 
-xdescribe 'Timecop tests for countdown widget' do
 
-  let(:hackathon) { Hackathon.create(name: "september", end_time: "05-Dec-2014 17:00:00") }
-
-  before do
-    visit "/dashing/dashboards/september"
-  end
-
-  before do
-    Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
-  end
-
-  after do
-    Timecop.return
-  end
-
-  it 'should display the time remaining for the hackathon', js: true do
-    expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
-    # expect(page).not_to have_errors
-  end
-
-end
-
-
+# describe 'Timecop tests for countdown widget' do
+#
+#   let(:hackathon) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
+#
+#   before do
+#     visit "/dashing/dashboards/september"
+#   end
+#
+#   before do
+#     Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
+#   end
+#
+#   after do
+#     Timecop.return
+#   end
+#
+#   it 'should display the time remaining for the hackathon', js: true do
+#     expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
+#     # expect(page).not_to have_errors
+#   end
+#
+# end

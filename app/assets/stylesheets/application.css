@@ -46,13 +46,16 @@
 #title_tile {
   box-sizing: border-box;
   height: 300px;
-  font-family: 'Open Sans', sans-serif;
-  color: white;
   background-color: hotpink;
-  font-size: 30px;
-  font-weight: 700;
-  color: white;  
 }
+  
+   h2 {
+    font-weight: 400; 
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    verticle-align:
+  }
 
 #project-description {
   box-sizing: border-box;

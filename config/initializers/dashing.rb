@@ -7,12 +7,12 @@ Dashing.configure do |config|
   # REDIS = Redis.new(:url => ENV['REDISTOGO_URL'])
   # Redis credentials.
 
-  ENV["REDISTOGO_URL"] = "http://dashing-trackathon.herokuapp.com" if Rails.env.development?
+  # ENV["REDISTOGO_URL"] = "http://dashing-trackathon.herokuapp.com" if Rails.env.development?
 
   # See https://devcenter.heroku.com/articles/redistogo to configure redis for heroku.
-  config.redis_host     = URI.parse(ENV["REDISTOGO_URL"]).host
-  config.redis_port     = URI.parse(ENV["REDISTOGO_URL"]).port
-  config.redis_password = URI.parse(ENV["REDISTOGO_URL"]).password
+  # config.redis_host     = URI.parse(ENV["REDISTOGO_URL"]).host
+  # config.redis_port     = URI.parse(ENV["REDISTOGO_URL"]).port
+  # config.redis_password = URI.parse(ENV["REDISTOGO_URL"]).password
   # config.redis_timeout  = 3
 
   # Redis namespace when pushing new data.
