@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-
 describe 'On the dashboard page' do
 
+  let!(:september){Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")}
+  let!(:trackathon){september.projects.create(name: 'Trackathon')}
+
   before do
-    @september = Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")
-    @september.projects.create(name: 'Trackathon')
-    visit "/hackathons/#{@september.id}"
+    visit "/hackathons/#{september.id}"
   end
 
   context 'welcome widget' do
@@ -32,10 +32,10 @@ describe 'On the dashboard page' do
     end
 
     it 'should be able to read the time from the database' do
-      expect(@september.end_time).to eq "05-Dec-2014 17:00:00"
+      expect(september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
-    it 'should extract the finish time of the hackathon from the database ' do
+    it 'should exctract the finish time of the hackathon from the database ' do
       expect(page).to have_css('[data-end="2014-12-05 17:00:00 UTC"]')
     end
 
@@ -44,25 +44,30 @@ describe 'On the dashboard page' do
   context 'project progress widget' do
 
     it 'should have a project progress widget' do
-      expect(page).to have_css('#project-progress-widget')
+      expect(page).to have_css("#project-progress-widget#{trackathon.id}")
     end
 
-    # it 'display the title of the widget on the screen', js: true do
-    #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
-    # end
+    it 'display the title of the widget on the screen', js: true do
+      expect(page.find("#project-progress-widget#{trackathon.id} h1")).to have_content('Trackathon')
+    end
 
 
     it 'should display the project name from the database', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
+      expect(page.find("#project-progress-widget#{trackathon.id} h1")).to have_content('Trackathon')
     end
 
     it 'should display the starting project percentage', js: true do
-      expect(page.find('#project-progress-widget .project').value).to eq('0')
+      expect(page.find("#project-progress-widget#{trackathon.id} .project").value).to eq('0')
+    end
+
+    xit 'should display the completed project percentage', js: true do
+      expect(page).to have_css('#project-progress-widget1 input.project[data-bind-value="20"]')
     end
 
   end
 
 end
+
 
 # describe 'Timecop tests for countdown widget' do
 #
