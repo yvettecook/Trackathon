@@ -6,13 +6,17 @@ describe 'on the dashboard page' do
 
 	before do
 		september.projects.create(name: "Drone Army")
+		visit "/hackathons/#{september.id}"
 	end
 
 	context "create project widget" do
 
 		it "should have a widget that links to the create project page" do
-			visit "/hackathons/#{september.id}"
 			expect(page).to have_css('#new-project-widget')
+		end
+
+		it 'should have a title of new project' do
+			expect(page).to have_css('#new-project-widget[data-title="Add a New Project"]')
 		end
 
 	end
