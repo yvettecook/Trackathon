@@ -45,7 +45,7 @@ describe 'The user journey' do
       @project = Project.create(name: "Pringle", hackathon_id: "#{@hackathon.id}")
       visit "/projects/#{@project.id}"
       click_link 'Hackathon dashboard'
-      expect(page.find("#project-progress-widget h1")).to have_content('Pringle')
+      expect(page.find("#project-progress-widget#{@project.id} h1")).to have_content('Pringle')
     end
 
   end
