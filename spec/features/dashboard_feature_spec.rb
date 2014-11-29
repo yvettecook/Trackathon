@@ -64,25 +64,25 @@ describe 'On the dashboard page' do
 
 end
 
-describe 'Timecop tests for countdown widget' do
-
-  let(:hackathon) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
-
-  before do
-    visit "/dashing/dashboards/september"
-  end
-
-  before do
-    Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
-  end
-
-  after do
-    Timecop.return
-  end
-
-  it 'should display the time remaining for the hackathon', js: true do
-    expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
-    # expect(page).not_to have_errors
-  end
-
-end
+# describe 'Timecop tests for countdown widget' do
+#
+#   let(:hackathon) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
+#
+#   before do
+#     visit "/dashing/dashboards/september"
+#   end
+#
+#   before do
+#     Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
+#   end
+#
+#   after do
+#     Timecop.return
+#   end
+#
+#   it 'should display the time remaining for the hackathon', js: true do
+#     expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
+#     # expect(page).not_to have_errors
+#   end
+#
+# end
