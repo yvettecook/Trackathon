@@ -19,6 +19,10 @@ describe 'on the dashboard page' do
 			expect(page).to have_css('#new-project-widget[data-title="Add a New Project"]')
 		end
 
+		it 'should display the title of the widget', js: true do
+			expect(page.find('#new-project-widget h1')).to have_content('Add a New Project')
+		end
+
 	end
 
 end
