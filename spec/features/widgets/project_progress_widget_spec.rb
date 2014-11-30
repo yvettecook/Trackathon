@@ -10,23 +10,20 @@ describe 'Project progress widget' do
   end
 
     it 'should have a project progress widget' do
-      expect(page).to have_css('#project-progress-widget')
+      expect(page).to have_css('#project-progress-widget1')
     end
-
-    # it 'display the title of the widget on the screen', js: true do
-    #   expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
-    # end
 
     xit 'should display the completed project percentage', js: true do
-      expect(page).to have_css('#project-progress-widget input.project[data-bind-value="20"]')
+      expect(page).to have_css('#project-progress-widget1 input.project[data-bind-value="20"]')
     end
 
-    xit 'should display the project name from the database', js: true do
-      expect(page.find('#project-progress-widget h1')).to have_content('Trackathon')
+    it 'should display the project name from the database', js: true do
+      expect(page.find('#project-progress-widget2 h1')).to have_content('Trackathon')
     end
 
     it 'should display the starting project percentage', js: true do
-      expect(page.find('#project-progress-widget .project').value).to eq('0')
+      sleep(30)
+      expect(page.find('#project-progress-widget1 .project').value).to eq('0')
     end
 
 end

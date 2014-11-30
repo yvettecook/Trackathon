@@ -2,10 +2,11 @@ require 'rails_helper'
 
 describe 'Timer widget' do
 
+  let!(:september){Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")}
+  let!(:trackathon){september.projects.create(name: 'Trackathon')}
+
   before do
-    @september = Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")
-    @september.projects.create(name: 'Trackathon')
-    visit "/hackathons/#{@september.id}"
+    visit "/hackathons/#{september.id}"
   end
 
 
@@ -18,7 +19,7 @@ describe 'Timer widget' do
     end
 
     it 'should be able to read the time from the database' do
-      expect(@september.end_time).to eq "05-Dec-2014 17:00:00"
+      expect(september.end_time).to eq "05-Dec-2014 17:00:00"
     end
 
     it 'should exctract the finish time of the hackathon from the database ' do
@@ -27,25 +28,27 @@ describe 'Timer widget' do
 
 end
 
-xdescribe 'Timecop tests for countdown widget' do
 
-  let(:hackathon) { Hackathon.create(name: "september", end_time: "05-Dec-2014 17:00:00") }
+# describe 'Timecop tests for countdown widget' do
+#
+#   let(:hackathon) { Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC") }
+#
+#   before do
+#     visit "/dashing/dashboards/september"
+#   end
+#
+#   before do
+#     Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
+#   end
+#
+#   after do
+#     Timecop.return
+#   end
+#
+#   it 'should display the time remaining for the hackathon', js: true do
+#     expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
+#     # expect(page).not_to have_errors
+#   end
+#
+# end
 
-  before do
-    visit "/dashing/dashboards/september"
-  end
-
-  before do
-    Timecop.travel(Time.local(2014, 11, 26, 10, 38, 0))
-  end
-
-  after do
-    Timecop.return
-  end
-
-  it 'should display the time remaining for the hackathon', js: true do
-    expect(page.find('#countdown-widget h1')).to have_content('Time remaining')
-    # expect(page).not_to have_errors
-  end
-
-end
