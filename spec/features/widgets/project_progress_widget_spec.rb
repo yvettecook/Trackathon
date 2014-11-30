@@ -22,7 +22,6 @@ describe 'Project progress widget' do
     end
 
     it 'should display the starting project percentage', js: true do
-      sleep(30)
       expect(page.find('#project-progress-widget1 .project').value).to eq('0')
     end
 
