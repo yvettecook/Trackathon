@@ -44,29 +44,9 @@
   background-color: #00C176;
 }
 
-  /*.new_hackathon {
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    display: table-cell;
-    text-decoration: none;
-    font-weight: 700;
-    color: white;
-  }*/
-
 #hackathon {
   background-color: #FF003C;
 }
-
-  /*.hackathon {
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    display: table-cell;
-    text-decoration: none;
-    font-weight: 400;
-    color: white;
-  }*/
 
 #team {
   background-color: #88C100;
@@ -81,7 +61,6 @@
     font-weight: 700;
     color: white;
   }
-
 
 
 /*  GROUPING  */
