@@ -14,7 +14,13 @@ describe 'Link between dashboard and project view page' do
 
   it 'should redirect to the project view page when clicked', js: true do
     click_link('project_view')
+    expect(page).to have_css('#project_link[onclick]')
+  end
+
+  it 'should redirect to the project view page when clicked', js: true do
+    find('#project_link[onclick]').click
     expect(current_path).to eq "/projects/#{@project.id}"
   end
 
 end
+
