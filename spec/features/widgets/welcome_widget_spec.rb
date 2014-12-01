@@ -13,6 +13,7 @@ require 'rails_helper'
     end
 
     it 'should have a title of hello' do
+      save_and_open_page
       expect(page).to have_css('#welcome-widget[data-title="Hello September"]')
     end
 
