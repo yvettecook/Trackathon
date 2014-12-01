@@ -1,11 +1,10 @@
 require 'rails_helper'
 
-
 describe 'Project progress widget' do
 
   before do
     @september = Hackathon.create(name: "september", end_time: "2014-12-05 17:00:00 UTC")
-    @september.projects.create(name: 'Trackathon')
+    @project = @september.projects.create(name: 'Trackathon')
     visit "/hackathons/#{@september.id}"
   end
 
@@ -23,10 +22,6 @@ describe 'Project progress widget' do
 
     it 'should display the starting project percentage', js: true do
       expect(page.find('#project-progress-widget1 .project').value).to eq('0')
-    end
-
-    it 'should have a link to the project page', js: true do
-      expect(page).to have_css('#project_view')
     end
 
 end
