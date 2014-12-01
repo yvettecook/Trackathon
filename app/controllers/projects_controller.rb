@@ -14,13 +14,13 @@ class ProjectsController < ApplicationController
 
   def edit
   	find_project
-  	@project.update(params.permit(:product, :design, :frontdev, :backdev, :presentation))
+  	@project.update(params.permit(:id, :product, :design, :frontdev, :backdev, :presentation))
   	render 'new'
   end
 
   def update
   	find_project
-  	@project.update(params[:project].permit(:product, :design, :frontdev, :backdev, :presentation))
+  	@project.update(params.permit(:id, :product, :design, :frontdev, :backdev, :presentation))
   	render 'new'
   end
 
