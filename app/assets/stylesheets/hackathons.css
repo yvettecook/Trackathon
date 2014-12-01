@@ -19,7 +19,7 @@
 
 /*TILE STYLING*/
 
-#title, #new_hackathon, #date, #submit {
+#title, #new_hackathon, #submit {
 	box-sizing: border-box;
 	height: 300px;
 	display: table;
