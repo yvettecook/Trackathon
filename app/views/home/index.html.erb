@@ -1,9 +1,23 @@
-<h1>Welcome to the Hackathon Tracker</h1>
+<div class="section group">
+  <div class="col span_3_of_5" id="welcome_tile">
+    <h1>Welcome to the Hackathon Tracker</h1>
+  </div>
+  <div class="col span_2_of_5" id="new_hackathon">
+    <%= link_to 'New Hackathon', new_hackathon_path, class: "new_hackathon" %>
+  </div>
+</div>
 
-<%= link_to 'New Hackathon', new_hackathon_path %>
 
-<% if @hackathons.any? %>
-  <% @hackathons.each do |hackathon| %>
-    <%= link_to "#{hackathon.name}", hackathon_path(hackathon) %>
+
+<div class="section group">
+  <% if @hackathons.any? %>
+    <% @hackathons.each do |hackathon| %>
+      <div class="col span_1_of_5" id="hackathon">
+        <%= link_to "#{hackathon.name}", hackathon_path(hackathon), class: "hackathon" %>
+      </div>
+    <% end %>
   <% end %>
-<% end %>
+  <div class="col span_1_of_5" id="team">
+    <p class="team">Information about us</p>
+  </div>
+</div>

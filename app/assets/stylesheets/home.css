@@ -1,0 +1,121 @@
+/*// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+  margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/* TILE STYING */
+
+#welcome_tile, #new_hackathon, #hackathon, #team {
+  box-sizing: border-box;
+  height: 300px;
+  display: table;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+#welcome_tile {
+  background-color: #FF8A00;
+}
+
+   h1 {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 400;
+  }
+
+#new_hackathon {
+  background-color: #00C176;
+}
+
+#hackathon {
+  background-color: #FF003C;
+}
+
+#team {
+  background-color: #88C100;
+}
+
+  .new_hackathon, .hackathon, .team {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+  }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+	width: 100%;
+}
+.span_4_of_5 {
+	width: 79.84%;
+}
+.span_3_of_5 {
+	width: 59.68%;
+}
+.span_2_of_5 {
+	width: 39.52%;
+}
+.span_1_of_5 {
+	width: 19.36%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_5_of_5 {
+		width: 100%;
+	}
+	.span_4_of_5 {
+		width: 100%;
+	}
+	.span_3_of_5 {
+		width: 100%;
+	}
+	.span_2_of_5 {
+		width: 100%;
+	}
+	.span_1_of_5 {
+		width: 100%;
+	}
+}
