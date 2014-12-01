@@ -28,7 +28,7 @@ describe 'The user journey' do
 
     it 'should take user to hackathon dashboard when they click on the link' do
       click_link 'September'
-      expect(current_path).to eq "/dashing/dashboards/september"
+      expect(current_path).to eq "/dashing/dashboards/hackathon"
     end
 
   end
