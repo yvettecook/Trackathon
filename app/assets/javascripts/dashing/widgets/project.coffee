@@ -9,12 +9,13 @@ class Dashing.Project extends Dashing.Widget
     meter.knob()
 
   onData: (data) ->
-    value = parseInt data.value, Dashing.AnimatedValue
-    $(@node).find(".project").val(value).trigger('change')
-
-
-  constructor: ->
     super
     @observe 'value', (value) ->
-      console.log(value)
-      $(@node).find(".project").val(value).trigger('change') # value --> completion
+      $(@node).find(".project").val(value).trigger('change')
+
+
+  # constructor: ->
+  #   super
+  #   @observe 'value', (value) ->
+  #     console.log(value)
+  #     $(@node).find(".project").val(value).trigger('change') # value --> completion
