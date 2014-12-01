@@ -2,6 +2,7 @@
   Trackathon dashboard
 <% end %>
 
+<% @hackathon = Hackathon.last %>
 <% @name = Hackathon.last.name %>
 <% @end_time = Hackathon.last.end_time %>
 
@@ -25,14 +26,17 @@
     <% if Hackathon.last.projects.any? %>
       <% @projects = Hackathon.last.projects.all %>
       <% @projects.each do |project| %>
-
         <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
           <div id="project-progress-widget<%= project.id %>" data-id="project<%= project.id %>" data-view="Project" data-title="<%= project.name %>" data-min="0" data-max="100"></div>
         </li>
-
       <% end %>
-
     <% end %>
+
+    <li data-row="2" data-col="2" data-sizex="1" data-sizey="1">
+      <a id="add" href="/hackathons/<%= @hackathon.id %>/projects/new">
+        <div id="new-project-widget" data-id="add" data-view="Add" data-title="Add a New Project"></div>
+      </a>
+    </li>
 
   </ul>
 
