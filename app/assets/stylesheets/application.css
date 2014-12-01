@@ -48,13 +48,12 @@
   height: 300px;
   background-color: hotpink;
 }
-  
+
    h2 {
-    font-weight: 400; 
+    font-weight: 400;
     font-size: 30px;
     font-family: 'Open Sans', sans-serif;
     color: white;
-    verticle-align:
   }
 
 #project-description {

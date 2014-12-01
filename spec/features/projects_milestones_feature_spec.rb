@@ -3,7 +3,7 @@ require 'byebug'
 
 describe 'On the project view page' do
   before do
-    @hello = Project.create(name: "Hello") 
+    @hello = Project.create(name: "Hello")
   end
 
   context 'A single project' do
