@@ -1,0 +1,445 @@
+@charset "UTF-8";/* line 9, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/clock.scss */
+.widget-clock {
+  background-color: #dc5945;
+}
+/* line 9, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/countdown.scss */
+.widget-countdown {
+  background-color: #4bc0ff;
+}
+
+/* line 14, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/project.scss */
+.widget-project {
+  background-color: pink  ;
+}
+/* line 18, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/project.scss */
+.widget-project input.project {
+  background-color: black;
+  color: #fff;
+}
+/* line 23, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/project.scss */
+.widget-project .title {
+  color: rgba(255, 255, 255, 0.7);
+}
+/* line 27, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/project.scss */
+.widget-project .more-info {
+  color: rgba(255, 255, 255, 0.3);
+}
+/* line 31, /Users/camillavk/Documents/Makers/final_project/Trackathon/app/assets/stylesheets/dashing/widgets/project.scss */
+.widget-project .updated-at {
+  color: rgba(0, 0, 0, 0.3);
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ */
+
+// Place all the styles related to the hackathons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*  SECTIONS  */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/*TILE STYLING*/
+
+#title, #new_hackathon, #submit {
+	box-sizing: border-box;
+	height: 300px;
+	display: table;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+#title {
+  background-color: #00C176;
+}
+
+	h2 {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	display: table-cell;
+	font-weight: 700;
+	}
+
+#new_hackathon {
+  background-color: #FF003C;
+}
+
+	#new_hackathon.new_hackathon {
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+#submit {
+  background-color: #F4B607;
+}
+
+	input[type=submit] {
+		margin-top: 50%;
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  color: #ffffff;
+	  font-size: 20px;
+	  background: #88C100;
+	  padding: 16px 17px 16px 20px;
+	  border: solid #050505 1px;
+	  text-decoration: none;
+}
+
+	input[type=submit]:hover {
+	  background: #186629;
+	  text-decoration: none;
+	}
+/*// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+/*  SECTIONS  */
+
+.section {
+	clear: both;
+	padding: 0px;
+  margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/* TILE STYING */
+
+#welcome_tile, #new_hackathon_tile, #hackathon, #team {
+  box-sizing: border-box;
+  height: 300px;
+  display: table;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+#welcome_tile {
+  background-color: #FF8A00;
+}
+
+   h1 {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 400;
+  }
+
+#new_hackathon_tile {
+  background-color: #00C176;
+}
+
+#hackathon {
+  background-color: #FF003C;
+}
+
+#team {
+  background-color: #88C100;
+}
+
+  .new_hackathon, .hackathon, .team {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+  }
+
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+	width: 100%;
+}
+.span_4_of_5 {
+	width: 79.84%;
+}
+.span_3_of_5 {
+	width: 59.68%;
+}
+.span_2_of_5 {
+	width: 39.52%;
+}
+.span_1_of_5 {
+	width: 19.36%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_5_of_5 {
+		width: 100%;
+	}
+	.span_4_of_5 {
+		width: 100%;
+	}
+	.span_3_of_5 {
+		width: 100%;
+	}
+	.span_2_of_5 {
+		width: 100%;
+	}
+	.span_1_of_5 {
+		width: 100%;
+	}
+}
+/* WHOLE FORM */
+
+#new_project {
+  box-sizing: border-box;
+  height: 300px;
+  display: table;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #FF003C;
+}
+
+  #new_project.new_project {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 700;
+    text-align: center;
+  }
+
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+ /*GOOGLE FONTS*/
+ /*@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,600,400);*/
+
+ /*body*/
+
+ body {
+   background-color: #272727;
+   max-width: 1280px;
+   text-align: center;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  PROJECT TILE STYLING  */
+
+#title_tile {
+  box-sizing: border-box;
+  height: 300px;
+  background-color: #f1c40f;
+
+}
+
+   h2 {
+    font-weight: 400;
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+  }
+
+#project-description {
+  box-sizing: border-box;
+  height: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #365267;
+}
+
+#product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
+  box-sizing: border-box;
+  height: 300px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+  h3 {
+    margin-top: 50%;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  .milestone {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+
+#product_tile {
+  background-color: #FF003C;
+}
+
+#design_tile {
+  background-color: #d35400;
+}
+
+#frontdev_tile {
+  background-color: #88C100;
+}
+
+#backdev_tile {
+  background-color: #00C176;
+}
+
+#presentation_tile {
+  background-color: #8e44ad;
+}
+
+/*  GROUPING  */
+.group:before,
+.group:after {
+	content:"";
+	display:table;
+}
+.group:after {
+	clear:both;
+}
+.group {
+    zoom:1; /* For IE 6/7 */
+}
+
+pgrid
+/*  GRID OF FIVE  */
+.span_5_of_5 {
+	width: 100%;
+}
+.span_4_of_5 {
+	width: 79.84%;
+}
+.span_3_of_5 {
+	width: 59.68%;
+}
+.span_2_of_5 {
+	width: 39.52%;
+}
+.span_1_of_5 {
+	width: 19.36%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col {
+		margin: 1% 0 1% 0%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.span_5_of_5 {
+		width: 100%;
+	}
+	.span_4_of_5 {
+		width: 100%;
+	}
+	.span_3_of_5 {
+		width: 100%;
+	}
+	.span_2_of_5 {
+		width: 100%;
+	}
+	.span_1_of_5 {
+		width: 100%;
+	}
+}
+
