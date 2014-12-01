@@ -27,10 +27,8 @@
     <% if Hackathon.last.projects.any? %>
       <% @projects = Hackathon.last.projects.all %>
       <% @projects.each do |project| %>
-        <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-          <a id="project_view" href="/projects/<%= project.id %>">
+        <li id="project_link" data-row="2" data-col="1" data-sizex="1" data-sizey="1" onclick='location.href="/projects/<%= project.id %>";'>
             <div id="project-progress-widget<%= project.id %>" data-id="project<%= project.id %>" data-view="Project" data-title="<%= project.name %>" data-min="0" data-max="100"></div>
-          </a>
         </li>
       <% end %>
     <% end %>
