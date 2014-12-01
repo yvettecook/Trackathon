@@ -11,8 +11,10 @@ describe 'updating project widgets' do
 
 	context "project progress widget", js: true do
 
-		xit 'displays current project completion percentage' do
+		it 'displays current project completion percentage' do
 			visit "/hackathons/#{september.id}"
+			# wait = Selenium::WebDriver::Wait.new(:timeout => 5)
+			# wait.until { page.find("#project-progress-widget1 .project").value == 20 }
 			expect(page.find("#project-progress-widget1 .project").value).to eq '20'
 		end
 	end

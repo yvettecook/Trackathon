@@ -1,6 +1,6 @@
 Dashing.scheduler.every '1s' do
-	
-	Project.all.each do |project| 
+
+	Project.all.each do |project|
 		id = project.id
 		project_value = get_project_status(id)
 		Dashing.send_event("project#{id}", { value: project_value })

@@ -2,16 +2,10 @@
   Trackathon dashboard
 <% end %>
 
-
-<% @hackathon = Hackathon.last %>
-<% @name = Hackathon.last.name %>
-<% @end_time = Hackathon.last.end_time %>
-
-
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="2" data-sizey="1">
-      <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="Hello <%= @hackathon.name.capitalize %>" data-text="This is your hackathon dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
+      <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="Hello <%= @name %>" data-text="This is your hackathon dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
 
     <!-- <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">

@@ -3,9 +3,7 @@ class HackathonsController < ApplicationController
 
   def show
     @hackathon = Hackathon.find(params[:id])
-    # @project = Project.find(params[:hackathon_id])
-    @name = @hackathon.name
-    redirect_to '/dashing/dashboards/september'
+    redirect_to "/dashing/dashboards/september?id=#{@hackathon.id}"
   end
 
   def new
@@ -14,7 +12,7 @@ class HackathonsController < ApplicationController
 
   def create
   	@hackathon = Hackathon.create(params.require(:hackathon).permit(:name, :end_time))
-  	redirect_to '/dashing/dashboards/september' # hard coded --> '/dashing/dashboards/project'
+  	redirect_to "/dashing/dashboards/september?id=#{@hackathon.id}"
   end
 
 
