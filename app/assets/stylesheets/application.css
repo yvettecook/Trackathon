@@ -61,7 +61,7 @@
   height: 300px;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: hotpink;
+  background-color: #718FA2;
 }
 
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
@@ -78,6 +78,7 @@
   h3 {
     margin-top: 50%;
     margin-bottom: 0;
+    font-weight: 400;
   }
 
   .milestone {
