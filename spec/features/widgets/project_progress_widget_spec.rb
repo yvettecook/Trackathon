@@ -25,4 +25,8 @@ describe 'Project progress widget' do
       expect(page.find('#project-progress-widget1 .project').value).to eq('0')
     end
 
+    it 'should have a link to the project page', js: true do
+      expect(page).to have_css('#project_view')
+    end
+
 end
