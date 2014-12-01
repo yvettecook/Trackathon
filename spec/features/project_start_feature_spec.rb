@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "New project page" do
 
   before do
-    @september = Hackathon.create(name: 'September')
+    @september = Hackathon.create(name: 'September', end_time: "2014-12-05 17:00:00 UTC")
     visit "/hackathons/#{@september.id}/projects/new"
   end
 
@@ -19,6 +19,12 @@ describe "New project page" do
     fill_in :project_name, with: 'Robot Army'
     click_on 'Create'
     expect(Project.all.count).to eq 1 
+  end
+
+  it "should redirect to the project view page when a project's created" do
+    fill_in :project_name, with: 'Robot Army'
+    click_on 'Create'
+    expect(current_path).to eq '/projects/2'
   end
 
 end

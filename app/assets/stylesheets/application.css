@@ -42,9 +42,24 @@
 .col:first-child { margin-left: 0; }
 
 /*  PROJECT TILE STYLING  */
+
 #title_tile {
   box-sizing: border-box;
-  height: 150px;
+  height: 300px;
+  background-color: hotpink;
+}
+  
+   h2 {
+    font-weight: 400; 
+    font-size: 30px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    verticle-align:
+  }
+
+#project-description {
+  box-sizing: border-box;
+  height: 300px;
   font-family: 'Open Sans', sans-serif;
   color: white;
   background-color: hotpink;

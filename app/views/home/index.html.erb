@@ -1,0 +1,9 @@
+<h1>Welcome to the Hackathon Tracker</h1>
+
+<%= link_to 'New Hackathon', new_hackathon_path %>
+
+<% if @hackathons.any? %>
+  <% @hackathons.each do |hackathon| %>
+    <%= link_to "#{hackathon.name}", hackathon_path(hackathon) %>
+  <% end %>
+<% end %>
