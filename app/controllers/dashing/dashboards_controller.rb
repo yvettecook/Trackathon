@@ -15,6 +15,7 @@ module Dashing
       @name = hackathon.name
       @end_time = hackathon.end_time
       @id = hackathon.id
+      @projects = hackathon.projects.all
       render file: dashboard_path(params[:name]), layout: Dashing.config.dashboard_layout_path
     end
 
@@ -29,7 +30,7 @@ module Dashing
     end
 
     def template_not_found
-      raise "Count not find template for dashboard '#{params[:name]}'. Define your dashboard in #{dashboard_path('')}"
+      raise "Could not find template for dashboard '#{params[:name]}'. Define your dashboard in #{dashboard_path('')}"
     end
 
     def add_dashboard_request
