@@ -55,6 +55,7 @@ gem 'puma'
 gem 'redis'
 gem 'launchy'
 gem 'rails_12factor'
+gem 'devise'
 
 group :test, :development do
   gem 'byebug'

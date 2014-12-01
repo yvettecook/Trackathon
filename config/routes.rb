@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  devise_for :users
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount Dashing::Engine, at: Dashing.config.engine_path
   
