@@ -24,11 +24,11 @@ describe 'on the dashboard page' do
 		end
 
 		it 'should have a link to the project page', js: true do
-			expect(page).to have_css('#add')
+			expect(page).to have_css('#new-project[onclick]')
 	  end
 
-		it 'should redirect to the new project page when clicked' do
-			click_link('add')
+		it 'should redirect to the new project page when clicked', js: true do
+			find('#new-project[onclick]').click
 			expect(current_path).to eq "/hackathons/#{september.id}/projects/new"
 		end
 
