@@ -1,0 +1,36 @@
+/* WHOLE FORM */
+
+#new_project {
+  box-sizing: border-box;
+  height: 300px;
+  display: table;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  background-color: #FF003C;
+}
+
+  #new_project.new_project {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 700;
+    text-align: center;
+  }
+
+
+/*  SECTIONS  */
+.section {
+  clear: both;
+  padding: 0px;
+  margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+  display: block;
+  float:left;
+  margin: 1% 0 1% 0.8%;
+}
+.col:first-child { margin-left: 0; }
