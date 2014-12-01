@@ -11,7 +11,7 @@ describe 'updating project widgets' do
 
 	context "project progress widget", js: true do
 
-		it 'displays current project completion percentage' do
+		xit 'displays current project completion percentage' do
 			visit "/hackathons/#{september.id}"
 			expect(page.find("#project-progress-widget1 .project").value).to eq '20'
 		end
