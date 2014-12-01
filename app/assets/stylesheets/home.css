@@ -19,7 +19,7 @@
 
 /* TILE STYING */
 
-#welcome_tile, #new_hackathon, #hackathon, #team {
+#welcome_tile, #new_hackathon_tile, #hackathon, #team {
   box-sizing: border-box;
   height: 300px;
   display: table;
@@ -40,7 +40,7 @@
     font-weight: 400;
   }
 
-#new_hackathon {
+#new_hackathon_tile {
   background-color: #00C176;
 }
 

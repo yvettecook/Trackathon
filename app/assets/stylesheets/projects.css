@@ -1,68 +1,24 @@
- /* BODY */
- body {
-   background-color: #272727;
-   max-width: 1280px;
-   text-align: center;
-   margin-left: auto;
-   margin-right: auto;
- }
-
 /* WHOLE FORM */
-#whole_form {
-  font-family: 'Open Sans', sans-serif;
-  color: white;
-  font-size: 20px;
-}
 
-#text, #name, #description, #create, #home {
+#new_project {
   box-sizing: border-box;
   height: 300px;
   display: table;
-}
-
-  h1 {
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    display: table-cell;
-    font-weight: 100;
-  }
-
-
-  .project_name {
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    display: table-cell;
-    font-weight: 100;
-  }
- 
- /* INDERVIDUAL SECTIONS */
-#text {
-  background-color: #3A07F4;
-} 
-
-#name {
-  background-color: #A6F003;
-}
-
-#description {
-  background-color: #F4B607;
-}
-
-#create {
-  background-color: #F27603;
-}
-
-#home {
-  background-color: #F11704;
-}
-
- /* SUBMIT BUTTON */
- .submit {
+  text-align: center;
   font-family: 'Open Sans', sans-serif;
-  height: 200px;
- }
+  color: white;
+  background-color: #FF003C;
+}
+
+  #new_project.new_project {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 700;
+    text-align: center;
+  }
+
 
 /*  SECTIONS  */
 .section {
@@ -78,61 +34,3 @@
   margin: 1% 0 1% 0.8%;
 }
 .col:first-child { margin-left: 0; }
-
-
-/*  GROUPING  */
-.group:before,
-.group:after {
-  content:"";
-  display:table;
-}
-.group:after {
-  clear:both;
-}
-.group {
-    zoom:1; /* For IE 6/7 */
-}
-                                               
-          
-/*  GRID OF FIVE  */
-.span_5_of_5 {
-  width: 100%;
-}
-.span_4_of_5 {
-  width: 79.84%;
-}
-.span_3_of_5 {
-  width: 59.68%;
-}
-.span_2_of_5 {
-  width: 39.52%;
-}
-.span_1_of_5 {
-  width: 19.36%;
-}
-
-/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-
-@media only screen and (max-width: 480px) {
-  .col { 
-    margin: 1% 0 1% 0%;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .span_5_of_5 {
-    width: 100%; 
-  }
-  .span_4_of_5 {
-    width: 100%; 
-  }
-  .span_3_of_5 {
-    width: 100%; 
-  }
-  .span_2_of_5 {
-    width: 100%; 
-  }
-  .span_1_of_5 {
-    width: 100%;
-  }
-}

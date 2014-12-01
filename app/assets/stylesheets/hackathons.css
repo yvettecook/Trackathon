@@ -1,0 +1,74 @@
+// Place all the styles related to the hackathons controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0.8% 0.8% 0.8% 0.8%;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 0% 0 0% 0.8%;
+}
+.col:first-child { margin-left: 0; }
+
+/*TILE STYLING*/
+
+#title, #new_hackathon, #submit {
+	box-sizing: border-box;
+	height: 300px;
+	display: table;
+	text-align: center;
+	font-family: 'Open Sans', sans-serif;
+	color: white;
+}
+
+#title {
+  background-color: #00C176;
+}
+
+	h2 {
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	display: table-cell;
+	font-weight: 700;
+	}
+
+#new_hackathon {
+  background-color: #FF003C;
+}
+
+	#new_hackathon.new_hackathon {
+		margin: 0;
+		padding: 0;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+#submit {
+  background-color: #F4B607;
+}
+
+	input[type=submit] {
+		margin-top: 50%;
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  color: #ffffff;
+	  font-size: 20px;
+	  background: #88C100;
+	  padding: 16px 17px 16px 20px;
+	  border: solid #050505 1px;
+	  text-decoration: none;
+}
+
+	input[type=submit]:hover {
+	  background: #186629;
+	  text-decoration: none;
+	}
