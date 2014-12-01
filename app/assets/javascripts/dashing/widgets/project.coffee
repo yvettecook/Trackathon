@@ -5,7 +5,7 @@ class Dashing.Project extends Dashing.Widget
   constructor: ->
     super
     @observe 'value', (value) ->
-      $(@node).find(".project").val(value).trigger('change')
+      $(@node).find(".project").val(value).trigger('change') # value --> completion
 
   ready: ->
     meter = $(@node).find(".project")

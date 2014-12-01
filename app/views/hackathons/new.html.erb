@@ -1,6 +1,6 @@
 <h2>Create Your Hackathon</h2>
 
-<%= form_for Hackathon.new, html: {multipart: true} do |f| %>
+<%= form_for Hackathon.new, html: {multipart: true} do |f| %> <!-- should be @hackathon -->
 	<%= f.label :name %>
 	<%= f.text_field :name %>
 	<%= f.label :end_time %>
