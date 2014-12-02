@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'on the dashboard page' do
 
-  let!(:september){Hackathon.create(name: 'september", end_time: "2014-12-05 17:00:00 UTC")}
+  let!(:september){Hackathon.create(name: 'september', end_time: "2014-12-05 17:00:00 UTC")}
 
   before do
     september.projects.create(name: "Drone Army")
