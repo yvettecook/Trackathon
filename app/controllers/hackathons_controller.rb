@@ -15,5 +15,4 @@ class HackathonsController < ApplicationController
   	redirect_to "/dashing/dashboards/hackathon?id=#{@hackathon.id}"
   end
 
-
 end
