@@ -32,5 +32,4 @@ describe 'creating a new hackathon form' do
 
   end
 
-
-	end
+end
