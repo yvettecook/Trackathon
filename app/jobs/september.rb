@@ -26,8 +26,8 @@ end
 
 
 require 'twitter'
-#### Get your twitter keys & secrets:
-#### https://dev.twitter.com/docs/auth/tokens-devtwittercom
+
+
 twitter = Twitter::REST::Client.new do |config|
 	config.consumer_key = 'W7KEItDGKLjM6zWoNOPdIYdPP'
 	config.consumer_secret = 'UrUFLMkigqw6U1pz3hYC9MMW4OGjOwwtsCNmjzTpbxz618Ex9s'
@@ -45,7 +45,7 @@ Dashing.scheduler.every '20s' do
 
 		if tweets
 			tweets = tweets.map do |tweet|
-				{ name: tweet.user.name, body: tweet.text, avatar: tweet.user.profile_image_url_https }
+				{ name: tweet.user.name, body: tweet.text }
 			end
 			Dashing.send_event('twitter_mentions', comments: tweets)
 		end
