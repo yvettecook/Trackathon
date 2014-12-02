@@ -8,7 +8,8 @@ rspec spec/features/multiple_projects_feature_spec.rb
 rspec spec/features/project_start_feature_spec.rb
 rspec spec/features/projects_milestones_feature_spec.rb
 rspec spec/features/projects_milestones_feature_spec_two.rb
-rspec spec/features/user_feature_spec.rb
+rspec spec/features/homepage_feature_spec.rb
+rspec spec/features/project_view_page_spec.rb
 rspec spec/features/widgets/new_project_link_widget_spec.rb
 rspec spec/features/widgets/new_project_widget_spec.rb
 rspec spec/features/widgets/project_progress_link_widget_spec.rb
