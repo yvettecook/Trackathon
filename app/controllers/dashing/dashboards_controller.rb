@@ -37,6 +37,5 @@ module Dashing
       DashboardRequest.create
     end
 
-
   end
 end
