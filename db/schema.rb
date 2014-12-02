@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141201163716) do
+ActiveRecord::Schema.define(version: 20141202161411) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20141201163716) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "endTime"
     t.datetime "end_time"
   end
 
@@ -34,6 +33,8 @@ ActiveRecord::Schema.define(version: 20141201163716) do
     t.boolean  "backdev"
     t.boolean  "presentation"
     t.integer  "hackathon_id"
+    t.text     "description"
+    t.text     "gitrepo"
   end
 
   add_index "projects", ["hackathon_id"], name: "index_projects_on_hackathon_id", using: :btree
