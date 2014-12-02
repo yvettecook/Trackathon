@@ -40,13 +40,15 @@ gem 'spring',        group: :development
 
 # Testing
 
-gem 'rspec-rails', group: :test # put all in group test
-gem 'capybara', group: :test
-gem 'timecop', group: :test
-gem 'database_cleaner', group: :test
-gem 'selenium-webdriver', group: :test
-gem 'chromedriver-helper', group: :test
-gem 'jasmine-rails', group: [:development, :test]
+group :test do
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'timecop'
+  gem 'database_cleaner'
+  gem 'selenium-webdriver'
+  gem 'chromedriver-helper'
+end
+
 
 # Dashboard
 
@@ -58,4 +60,5 @@ gem 'rails_12factor', group: :production
 
 group :test, :development do
   gem 'byebug'
+  gem 'jasmine-rails'
 end

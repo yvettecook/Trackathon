@@ -16,3 +16,6 @@
 /tmp
 
 /config/secrets.yml
+
+.DS_STORE
+dump.rdb

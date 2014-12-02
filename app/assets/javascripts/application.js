@@ -8,8 +8,9 @@
 // compiled file.
 //
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
+// about supported directives
 //
+//= require dashing
 //= require jquery
 //= require jquery_ujs
 //= require projects

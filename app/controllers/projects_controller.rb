@@ -9,7 +9,6 @@ class ProjectsController < ApplicationController
 
   def show
     find_project
-    # find_hackathon
   end
 
   def edit

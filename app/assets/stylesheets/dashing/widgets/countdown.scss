@@ -1,7 +1,7 @@
 // ----------------------------------------------------------------------------
 // Sass declarations
 // ----------------------------------------------------------------------------
-$background-color:  #4BC0FF;
+$background-color: #12b0c5;
 
 // ----------------------------------------------------------------------------
 // Widget-clock styles
@@ -10,4 +10,15 @@ $background-color:  #4BC0FF;
 
   background-color: $background-color;
 
+}
+
+.widget-countdown h1 {
+  font-size: 375%;
+}
+
+.widget-countdown h2 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-transform: capitalize;
+  font-weight: 100;
+  font-size: 150%;
 }
