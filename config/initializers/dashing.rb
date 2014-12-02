@@ -16,7 +16,7 @@ Dashing.configure do |config|
     config.redis_port     = URI.parse(ENV["REDISTOGO_URL"]).port
     config.redis_password = URI.parse(ENV["REDISTOGO_URL"]).password
   end
-  
+
   # config.redis_timeout  = 3
 
   # Redis namespace when pushing new data.
