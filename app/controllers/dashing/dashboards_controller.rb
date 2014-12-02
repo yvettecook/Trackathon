@@ -11,7 +11,7 @@ module Dashing
     end
 
     def show
-      find_hackathon
+      @hackathon = Hackathon.find_by(:id => params[:id])
       @id = params[:id]
       @name = @hackathon.name
       @end_time = @hackathon.end_time
