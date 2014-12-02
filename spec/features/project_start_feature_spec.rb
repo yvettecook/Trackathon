@@ -17,10 +17,8 @@ describe "New project page" do
 
   it 'creates a new project' do
     fill_in :project_name, with: 'Robot Army'
-    save_and_open_page
     click_button 'create'
-    save_and_open_page
-    expect(Project.all.count).to eq 1 
+    expect(Project.all.count).to eq 1
   end
 
   it "should redirect to the project view page when a project's created" do
