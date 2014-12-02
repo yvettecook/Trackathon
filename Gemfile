@@ -56,6 +56,8 @@ gem 'redis'
 gem 'launchy'
 gem 'rails_12factor'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :test, :development do
   gem 'byebug'

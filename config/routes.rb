@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks"}
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount Dashing::Engine, at: Dashing.config.engine_path
   
