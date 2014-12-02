@@ -11,11 +11,11 @@ module Dashing
     end
 
     def show
-      hackathon = Hackathon.find_by(:id => params[:id])
-      @name = hackathon.name
-      @end_time = hackathon.end_time
-      @id = hackathon.id
-      @projects = hackathon.projects.all
+      find_hackathon
+      @id = params[:id]
+      @name = @hackathon.name
+      @end_time = @hackathon.end_time
+      @projects = @hackathon.projects.all
       render file: dashboard_path(params[:name]), layout: Dashing.config.dashboard_layout_path
     end
 
@@ -35,6 +35,10 @@ module Dashing
 
     def add_dashboard_request
       DashboardRequest.create
+    end
+
+    def find_hackathon
+      @hackathon = Hackathon.find_by(:id => params[:id])
     end
 
   end
