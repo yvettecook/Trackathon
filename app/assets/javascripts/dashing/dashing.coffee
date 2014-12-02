@@ -1,4 +1,4 @@
-console.log("Yeah! The dashboard has started!")
+console.log("Fuck yeah! The dashboard has started!")
 
 Dashing.on 'ready', ->
   Dashing.widget_margins ||= [5, 5]
