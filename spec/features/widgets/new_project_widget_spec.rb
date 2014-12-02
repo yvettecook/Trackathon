@@ -9,9 +9,9 @@ describe 'on the dashboard page' do
 		visit "/hackathons/#{september.id}"
 	end
 
-	context "create project widget" do
+	context 'create project widget' do
 
-		it "should have a widget that links to the create project page" do
+		it 'should have a widget that links to the create project page' do
 			expect(page).to have_css('#new-project-widget')
 		end
 

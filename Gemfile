@@ -54,7 +54,7 @@ gem 'dashing-rails'
 gem 'puma'
 gem 'redis'
 gem 'launchy'
-gem 'rails_12factor'
+gem 'rails_12factor', group: :production
 
 group :test, :development do
   gem 'byebug'
