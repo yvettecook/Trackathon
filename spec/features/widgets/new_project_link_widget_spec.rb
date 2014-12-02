@@ -15,7 +15,7 @@ describe 'on the dashboard page' do
 
   it 'should redirect to the new project page when clicked', js: true do
     find('#new-project[onclick]').click
-    expect(current_path).to eq "/hackathons/#{@september.id}/projects/new"
+    expect(current_path).to eq "/hackathons/#{september.id}/projects/new"
   end
 
 end
