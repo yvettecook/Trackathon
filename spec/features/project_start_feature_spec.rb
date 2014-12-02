@@ -14,6 +14,7 @@ describe "New project page" do
   it 'has a new project form' do
     expect(page).to have_field 'project_name'
     expect(page).to have_field 'project_description'
+    expect(page).to have_field 'project_gitrepo'
   end
 
 end
