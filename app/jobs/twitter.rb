@@ -2,16 +2,10 @@ require 'twitter'
 
 
 twitter = Twitter::REST::Client.new do |config|
-  config.consumer_key = ENV['TWITTER_CONSUMER_KEY']
-  config.consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
-  config.access_token = ENV['TWITTER_ACCESS_TOKEN']
-  config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
-
-  # config.consumer_key = 'W7KEItDGKLjM6zWoNOPdIYdPP'
-  # config.consumer_secret = 'UrUFLMkigqw6U1pz3hYC9MMW4OGjOwwtsCNmjzTpbxz618Ex9s'
-  # config.access_token = '122639798-4Nga2ptCMZmruyY3c6WNnxM4HrCQGJDezlAsiZvJ'
-  # config.access_token_secret = '0nYttdbRztAuTuTKwz38OOd0j7039Jw6kgArEp2Mbm2CI'
-
+  config.consumer_key = Rails.application.secrets.twitter_consumer_key
+  config.consumer_secret = Rails.application.secrets.twitter_consumer_secret
+  config.access_token = Rails.application.secrets.twitter_access_token
+  config.access_token_secret = Rails.application.secrets.twitter_access_token_secret
 end
 
 search_term = URI::encode('@makersacademy')
