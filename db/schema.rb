@@ -50,11 +50,8 @@ ActiveRecord::Schema.define(version: 20141202135030) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-<<<<<<< HEAD
     t.string   "provider"
     t.string   "uid"
-=======
->>>>>>> d2cdd3c5ed54e675072d816aab48c4b1a6b44241
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
