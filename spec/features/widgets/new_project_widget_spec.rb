@@ -9,9 +9,9 @@ describe 'on the dashboard page' do
 		visit "/hackathons/#{september.id}"
 	end
 
-	context "create project widget" do
+	context 'create project widget' do
 
-		it "should have a widget that links to the create project page" do
+		it 'should have a widget that links to the create project page' do
 			expect(page).to have_css('#new-project-widget')
 		end
 
@@ -21,15 +21,6 @@ describe 'on the dashboard page' do
 
 		it 'should display the title of the widget', js: true do
 			expect(page.find('#new-project-widget h1')).to have_content('Add a New Project')
-		end
-
-		it 'should have a link to the project page', js: true do
-			expect(page).to have_css('#new-project[onclick]')
-	  end
-
-		it 'should redirect to the new project page when clicked', js: true do
-			find('#new-project[onclick]').click
-			expect(current_path).to eq "/hackathons/#{september.id}/projects/new"
 		end
 
 	end

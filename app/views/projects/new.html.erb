@@ -1,23 +1,20 @@
 
-<body>
-  <div class="section group" id="whole_form">
-    <div class="col span_1_of_5" id="text">
-      <h1>Add your project's</h1>
-    </div>
-    <div class="col span_1_of_5" id="name">
-        <%= form_for [@hackathon, @project] do |f| %>
-        <%= f.label :name %>
-        <%= f.text_area :name %>
-    </div>
-    <div class="col span_1_of_5" id="description">
-      <h1>Description</h1>
-    </div>
-    <div class="col span_1_of_5" id="create">
-      <%= f.submit "Create", :class => 'submit' %>
-      <% end %>
-    </div>
-    <div class="col span_1_of_5" id="home">
-      <h1>Home</h1>
-    </div>
+<div class="section group">
+  <div class="col span_5_of_5" id="title">
+    <h1>Add your project</h1>
   </div>
-</body>
+</div>
+
+<div class="section group">
+  <div class="col span_4_of_5" id="new_project">
+      <%= form_for [@hackathon, @project] do |f| %>
+      <%= f.label :name %>
+      <%= f.text_area :name %><br>
+      <%= f.label :description %>
+      <%= f.submit "Create", :id => 'create' %>
+    <% end %>
+  </div>
+  
+  <div class="col span_1_of_5" id="submit">
+  </div>
+</div>
