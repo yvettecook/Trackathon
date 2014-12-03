@@ -9,6 +9,7 @@ end
 
 search_term = URI::encode('#septmakers')
 
+
 Dashing.scheduler.every '5s', :first_in => 1 do |job|
 
   begin

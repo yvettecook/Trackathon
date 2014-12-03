@@ -33,4 +33,5 @@ require 'rails_helper'
       expect(page.find("#project-progress-widget#{@hello.id} h1")).to have_content('Hello')
     end
 
+  
 end
