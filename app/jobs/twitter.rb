@@ -9,8 +9,9 @@
 
 # search_term = URI::encode('#septmakers')
 
+
 # Dashing.scheduler.every '20m', :first_in => 1 do |job|
-  
+
 #   begin
 #     tweets = twitter.search("#{search_term}")
 
