@@ -20,7 +20,6 @@ Dashing.scheduler.every '1s' do
       tweets = tweets.map do |tweet|
         { name: tweet.user.name, body: tweet.text }
       end
-      p tweets
       Dashing.send_event('twitter_mentions', comments: tweets)
     end
 
