@@ -34,3 +34,10 @@
   margin: 1% 0 1% 0.8%;
 }
 .col:first-child { margin-left: 0; }
+
+input.milestone
+{
+  width: 30px;
+  height: 30px;
+}
+
