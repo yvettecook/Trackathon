@@ -61,6 +61,8 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'twitter', '>= 5.9.0'
+gem 'nokogiri'
+gem 'json'
 
 group :test, :development do
   gem 'byebug'
