@@ -1,18 +1,17 @@
 require 'net/http'
 require 'json'
 
-repos = [{owner: "yvettecook", name: "trackathon"}, {owner: "annaschechter", name: "stack-overtube-back-end"}, {owner: "MadameSardine", name: "pandapop"}]
-
-total_lines = 0
+repos = [{owner: "yvettecook", name: "trackathon"}, {owner: "jamesascarter", name: "stack-overtube-frontend"}, {owner: "MadameSardine", name: "pandapop"}, {owner: "Schlap", name: "project-noderover"}, {owner: "Scully87", name: "FATS_badgr"}, {owner: "karinnielsen", name: "Final-Project-POSTit"}]
 
 repos.each do |repo|
   response = Net::HTTP.get(URI("https://api.github.com/repos/#{repo[:owner]}/#{repo[:name]}/stats/code_frequency"))
   data = JSON.parse(response)
 
-  number = data[0][1] + data[0][2] + data[1][1] + data[1][2]
+  number = 0
+  data.each do |week|
+  	number += (week[1] + week[2])
+  end
   
-  total_lines += number
+  puts repo[:name] + ": total lines of code = " + number.to_s
 end
-
-puts total_lines
 
