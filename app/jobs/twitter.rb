@@ -7,11 +7,10 @@ twitter = Twitter::REST::Client.new do |config|
   config.access_token_secret = Rails.application.secrets.twitter_access_token_secret
 end
 
-search_term = URI::encode('@makersacademy')
+search_term = URI::encode('#septmakers')
 
 Dashing.scheduler.every '20m', :first_in => 1 do |job|
-# Dashing.scheduler.every '5s' do
-
+  
   begin
     tweets = twitter.search("#{search_term}")
 

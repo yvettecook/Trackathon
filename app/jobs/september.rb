@@ -1,4 +1,4 @@
-Dashing.scheduler.every '1s' do
+Dashing.scheduler.every '2s' do
 
 	Project.all.each do |project|
 		id = project.id
