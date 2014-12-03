@@ -29,9 +29,7 @@ describe "Filling in form" do
   end
 
   it 'Links to the github repository of the page when a link has been added' do
-    save_and_open_page
     expect(page).to have_link 'Github Repository'
   end
-
 
 end
