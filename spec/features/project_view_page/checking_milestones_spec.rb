@@ -1,30 +1,11 @@
 require 'rails_helper'
-require 'byebug'
 
-describe 'On the project view page' do
+describe 'Checking project milestones' do
 
   before do
     @hello = Project.create(name: "Hello")
     visit "/projects/#{@hello.id}"
   end
-
-  context 'A single project' do
-
-    it 'should show the project name' do
-      expect(page).to have_content 'Hello'
-    end
-
-    it 'should show the project milestones' do
-      expect(page).to have_content 'Design'
-    end
-
-    it 'should have a checkbox' do
-      expect(page).to have_css("#product")
-    end
-
-    it 'the checkbox starts off unchecked' do
-      expect(find(:css, "#product[value='product']").checked?). to eq nil
-    end
 
     it 'should be able to check a checkbox' do
       check("product")
@@ -43,9 +24,22 @@ describe 'On the project view page' do
       expect(Project.find_by_name('Hello').design).to eq true
     end
 
+    it 'should save the value of the frontdev checkbox to the database', js: true do
+      check("frontdev")
+      wait_for_ajax
+      expect(Project.find_by_name('Hello').frontdev).to eq true
+    end
 
-  end
+    it 'should save the value of the backdev checkbox to the database', js: true do
+      check("backdev")
+      wait_for_ajax
+      expect(Project.find_by_name('Hello').backdev).to eq true
+    end
 
-
+    it 'should save the value of the presentation checkbox to the database', js: true do
+      check("presentation")
+      wait_for_ajax
+      expect(Project.find_by_name('Hello').presentation).to eq true
+    end
 
 end

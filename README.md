@@ -56,6 +56,15 @@ bin/rake RAILS_ENV=test db:create db:migrate
 
 secrets.yml - create and populate
 
+
+* Heroku
+
+Precompile before upload:
+
+`RAILS_ENV=production bundle exec rake assets:precompile`
+Commit
+`git push heroku master`
+
 * Database creation & initialization
 
 `bin/rake db:create db:migrate`
