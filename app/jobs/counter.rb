@@ -2,11 +2,12 @@
 
 
 
-current_karma = 0
+current_count = 0
 
 Dashing.scheduler.every '2s' do
-  last_karma     = current_karma
-  current_karma     = rand(200000)
+  last_count     = current_count
+  current_count  =  current_count + rand(5)
 
-  Dashing.send_event('karma', { current: current_karma, last: last_karma })
+
+  Dashing.send_event('counter', { current: current_count, last: last_count })
 end

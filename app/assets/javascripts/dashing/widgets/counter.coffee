@@ -1,4 +1,4 @@
-class Dashing.Counter extends Dashing.Widget
+class Dashing.Number extends Dashing.Widget
   @accessor 'current', Dashing.AnimatedValue
 
   @accessor 'difference', ->
