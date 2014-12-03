@@ -60,6 +60,7 @@ gem 'rails_12factor', group: :production
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-github'
+gem 'twitter', '>= 5.9.0'
 
 group :test, :development do
   gem 'byebug'

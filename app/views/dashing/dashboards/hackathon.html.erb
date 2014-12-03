@@ -8,22 +8,26 @@
       <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="Hello <%= @name.capitalize %>" data-text="This is your hackathon dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
 
-    <li data-row="2" data-col="3" data-sizex="3" data-sizey="1">
+    <li data-row="2" data-col="1" data-sizex="3" data-sizey="1">
       <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @end_time %>"></div>
       <i class="icon-time icon-background"></i>
     </li>
 
-    <% @projects.each do |project| %>
-      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1">
-        <li id="project_link" data-row="2" data-col="1" data-sizex="1" data-sizey="1" onclick='location.href="/projects/<%= project.id %>";'>
-          <div id="project-progress-widget<%= project.id %>" data-id="project<%= project.id %>" data-view="Project" data-title="<%= project.name %>" data-min="0" data-max="100"></div>
+    <li id="new-project" data-row="3" data-col="1" data-sizex="1" data-sizey="1" onclick='location.href="/hackathons/<%= @hackathon.id %>/projects/new";'>
+      <div id="new-project-widget" data-id="add" data-view="Text" data-title="Add a New Project"></div>
+    </li>
 
+    <% @projects.each do |project| %>
+      <li id="project_link" data-row="2" data-col="1" data-sizex="1" data-sizey="1" onclick='location.href="/projects/<%= project.id %>";'>
+          <div id="project-progress-widget<%= project.id %>" data-id="project<%= project.id %>" data-view="Project" data-title="<%= project.name %>" data-min="0" data-max="100"></div>
       </li>
     <% end %>
 
-    <li id="new-project" data-row="1" data-col="4" data-sizex="1" data-sizey="1" onclick='location.href="/hackathons/<%= @hackathon.id %>/projects/new";'>
-      <div id="new-project-widget" data-id="add" data-view="Text" data-title="Add a New Project"></div>
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
+      <div data-id="twitter_mentions" data-view="Comments" style="background-color:#ff9618;" data-moreinfo="Tweets about @makersacademy"></div>
+      <i class="icon-twitter icon-background"></i>
     </li>
+
 
   </ul>
 
