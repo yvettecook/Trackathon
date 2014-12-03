@@ -10,8 +10,8 @@ end
 
 search_term = URI::encode('@makersacademy')
 
-# Dashing.scheduler.every '5s', :first_in => 0 do |job|
-Dashing.scheduler.every '1s' do
+Dashing.scheduler.every '20m', :first_in => 1 do |job|
+# Dashing.scheduler.every '5s' do
 
   begin
     tweets = twitter.search("#{search_term}")
@@ -24,8 +24,8 @@ Dashing.scheduler.every '1s' do
       Dashing.send_event('twitter_mentions', comments: tweets)
     end
 
-  rescue Twitter::Error
-    puts "\e[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.\e[0m"
+  # rescue Twitter::Error
+  #   puts "\e[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.\e[0m"
   end
 
 end
