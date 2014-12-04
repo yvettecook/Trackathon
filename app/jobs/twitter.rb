@@ -9,6 +9,7 @@ end
 
 search_term = URI::encode('#septmakers')
 
+
 Dashing.scheduler.every '5m', :first_in => '1s' do
 
   begin
@@ -18,12 +19,9 @@ Dashing.scheduler.every '5m', :first_in => '1s' do
       tweets = tweets.map do |tweet|
         { name: tweet.user.name, body: tweet.text }
       end
-      p tweets
       Dashing.send_event('twitter_mentions', comments: tweets)
     end
 
-  # rescue Twitter::Error
-  #   puts "\e[33mFor the twitter widget to work, you need to put in your twitter API keys in the jobs/twitter.rb file.\e[0m"
   end
 
 end
