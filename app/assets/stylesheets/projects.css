@@ -1,13 +1,13 @@
 /* WHOLE FORM */
 
 #new_project {
+  height: 240px;
   box-sizing: border-box;
-  height: 300px;
   display: table;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #FF003C;
+  background-color: #12b0c5;
 }
 
   #new_project.new_project {
