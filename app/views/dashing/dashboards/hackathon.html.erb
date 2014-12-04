@@ -13,25 +13,27 @@
 
     <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
       <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @end_time %>"></div>
-      <i class="icon-time icon-background"></i>
+      <i class="fa fa-clock-o icon-background"></i>
     </li>
 
     <li id="new-project" data-row="3" data-col="1" data-sizex="1" data-sizey="1" onclick='location.href="/hackathons/<%= @hackathon.id %>/projects/new";'>
       <div id="new-project-widget" data-id="add" data-view="Text" data-title="Add a New Project" style="background-color:#662B4C;"></div>
+      <i class="fa fa-terminal icon-background"></i>
     </li>
 
     <li data-row="2" data-col="1" data-sizex="2" data-sizey="1">
       <div data-id="twitter_mentions" data-view="Comments" data-moreinfo="Tweets about #septmakers"></div>
-      <i class="icon-twitter icon-background"></i>
+      <i class="fa fa-twitter icon-background"></i>
     </li>
 
     <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
       <div data-id="beer" data-view="Number" data-title="Need for Beer" style="background-color:#46BBB3;"></div>
-      <i class="icon-heart icon-background"></i>
+      <i class="fa fa-heart icon-background icon-large"></i>
     </li>
 
     <li data-row="2" data-col="5" data-sizex="1" data-sizey="2">
       <div data-id="gitlines" data-title-total="Total Lines of Code" data-view="List" data-unordered="true" data-title="Lines of Code" data-moreinfo="# of times said around the office"></div>
+      <i class="fa fa-github icon-background"></i>
     </li>
 
     <% @projects.each do |project| %>
