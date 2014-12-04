@@ -1,12 +1,13 @@
-## Trackathon
-An app for giving an overview of projects status' during a hackathon
+# Trackathon
+#### *A simply dashing way to track hackathons*
+Check it out at [dashing-trackathon.herokuapp.com](http://dashing-trackathon.herokuapp.com/)
 
+[Screenshot of Dashboard]
 
-### Context
-This was built as our final project at [Maker's Academy](www.makersacademy.com), over two weeks of blood, sweat, tears, sweary commits and high-fives.
+### The Story behind Trackathon
+On September 15th, 2014, the creators of Trackathon jumped straight into the deep end of the coding pool by starting their first day at [Maker's Academy](www.makersacademy.com). Ten weeks (and more technologies than we care to list) later, final project time rolled around. Makers' brave students were presented with many potential challenges, including that of providing a tool for tracking teams' progress throughout the course of a hackathon. Five unlikely heroes rose to that challenge, persevering through many coding hardships. After two weeks of blood, sweat, tears, and many cans of Pringles, our team is proud to unleash Trackathon upon the world.
 
-The project was pitched by [Spike](https://github.com/spike01).
-
+Want to track your own hackathon? Go to the [site](http://dashing-trackathon.herokuapp.com/) and get started.
 
 ### Team
 
@@ -16,91 +17,66 @@ The project was pitched by [Spike](https://github.com/spike01).
 * Victoria Barr: [barr-code](https://github.com/barr-code)
 * Yvette Cook: [yvettecook](https://github.com/yvettecook)
 
-### Tools
+# Tools
 
-* Ruby version
-* Gems - development
-* Gems - testing
-* System dependencies
-
-* Dashing-Rails
-
-For more information see [dashing.io](http://dashing.io/)
+*Languages:*
+  * Ruby
+  * Javascript
+  * CoffeeScript
 
 
-### Installation
+*Created with:*
+  * Ruby on Rails (v4.1.7)
+  * PostgresQL
+  * [Dashing-Rails](https://github.com/gottfrois/dashing-rails)
 
-`git clone`
-`bundle install`
+*Tested with:*
 
-Ensure you have PostgresQL installed (link)
-Install Redis (this should happen on Gemfile - why doesn't it?)
+  * RSpec
+  * Capybara
+  * Selenium
+  * Jasmine
 
-* Configuration
+*Deployed with:*
 
-secrets.yml - create and populate
-
-* Database creation & initialization
-
-`bin/rake db:create db:migrate`
-
-
-
-* How to run the test suite
+  * Heroku
+  * Puma
+  * Redis-Server
 
 
-Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
-bin/rake RAILS_ENV=test db:create db:migrate
+# Installation
 
-* Configuration
+If you'd like to host to app yourself, follow the steps below.
 
-secrets.yml - create and populate
+1. Before download, install
+  * PostgresQL
+  * Redis-server
 
 
-* Heroku
+2. Download the code, and install the gems
 
-Precompile before upload:
+  Run `$ git clone git@github.com:yvettecook/Trackathon.git`
 
-`RAILS_ENV=production bundle exec rake assets:precompile`
-Commit
-`git push heroku master`
+  Then `$ bundle install`
 
-* Database creation & initialization
+3. *Configuration*
 
-`bin/rake db:create db:migrate`
+Create a `config/secrets.yml` file, and populate with:
+      * secret_key_base
+      * Twitter access tokens, if you wish to use to live twitter stream widget
+      * GitHub authentication, if you wish to use GitHub logins
 
-* How to run the test suite
+To create the database run `$ bin/rake db:create db:migrate`
 
-Install [Firefox](https://www.mozilla.org/en-GB/firefox/new/)
+4. *Testing*
 
-To run non JavaScript tests use: rspec spec -t ~js
+Firefox must be installed in order for Selenium to run.
 
-Test scripts:
+To run the rspec test scripts:
 
 `$ chmod u+x testrunner.sh`
 `$ ./testrunner.sh`
 
-Jasmine Tests:
-
-* either http://localhost:3000/specs or
+To run the jasmine unit tests either visit http://localhost:3000/specs or run
 
 `$ RAILS_ENV=test bundle exec rake spec:javascript`
-
-
-* Deployment instructions
-
-
-
-
-### Learnings
-
-
-
-### Thanks to
-
-* Leo
-* Dave
-* Spike
-* Sam
-
-* All the team at Makers Academy
