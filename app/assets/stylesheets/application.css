@@ -317,9 +317,21 @@ pgrid
   }
 
   #title {
-    background-color: #dc5945;
+    background-color: #9c4274;
   }
 
   #form {
     background-color: #eb9c3c;
+    height: 240px;
+    font-size: 20px;
+  }
+
+  #links {
+    background-color: #A2BF4B;
+    height: 240px;
+  }
+
+  #sign_in {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
   }
