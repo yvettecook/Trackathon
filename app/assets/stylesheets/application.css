@@ -335,3 +335,29 @@ pgrid
     font-family: 'Open Sans', sans-serif;
     color: white;
   }
+
+    form#new_user.new_user {
+    margin-top: 20px;
+  }
+
+  input#user_remember_me {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  input#user_email {
+    width: 500px;
+  }
+
+  input#user_password {
+    margin-top: 10px;
+    width: 500px;
+  }
+
+   input#user_password_confirmation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+  }
