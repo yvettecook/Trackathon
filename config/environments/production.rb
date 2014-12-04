@@ -9,6 +9,7 @@ Rails.application.configure do
   config.consumer_secret = ENV['TWITTER_CONSUMER_SECRET']
   config.access_token = ENV['TWITTER_ACCESS_TOKEN']
   config.access_token_secret = ENV['TWITTER_ACCESS_TOKEN_SECRET']
+  
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
