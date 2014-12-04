@@ -63,6 +63,7 @@ gem 'omniauth-github'
 gem 'twitter', '>= 5.9.0'
 gem 'nokogiri'
 gem 'json'
+gem "font-awesome-rails"
 
 group :test, :development do
   gem 'byebug'

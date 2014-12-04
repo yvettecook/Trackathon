@@ -22,9 +22,9 @@ describe 'User management' do
 		before do
 			visit '/'
 			click_link 'Sign up'
-			fill_in 'Email', with: "test@example.com"
-			fill_in 'Password', with: "testpassword"
-			fill_in 'Password confirmation', with: "testpassword"
+			fill_in :email, with: "test@example.com"
+			fill_in :'password (8 char)', with: "testpassword"
+			fill_in :'password confirmation', with: "testpassword"
 			click_button 'Sign up'
 		end
 

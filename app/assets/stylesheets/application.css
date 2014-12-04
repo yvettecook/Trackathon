@@ -10,6 +10,7 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -24,6 +25,14 @@
    text-align: center;
    margin-left: auto;
    margin-right: auto;
+ }
+
+ /*Powered by Trackathon*/
+ .powerd_by {
+  max-width: 1280px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
  }
 
 /*  SECTIONS  */
@@ -46,16 +55,20 @@
 #title_tile {
   box-sizing: border-box;
   height: 240px;
-  background-color: #12b0c5;
+  background-color: #662B4C;
+  font-family: 'Open Sans', sans-serif;
 }
 
    h2 {
     font-weight: 400;
     font-size: 30px;
-    font-family: 'Open Sans', sans-serif;
     color: white;
     opacity: 0.7;
     margin-top: 50px;
+  }
+
+  #hackathon_link {
+    vertical-align: baseline;
   }
 
 #project-description {
@@ -63,7 +76,7 @@
   height: 240px;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #E54F2F;
+  background-color: #dc5945;
 }
 
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
@@ -75,6 +88,7 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  font-size: 20px;
 }
 
   h3 {
@@ -92,23 +106,38 @@
 
 
 #product_tile {
-  background-color: #FF003C;
+  background-color: #dc5945;
 }
 
 #design_tile {
-  background-color: #d35400;
+  background-color: #eb9c3c;
 }
 
 #frontdev_tile {
-  background-color: #88C100;
+  background-color: #9c4274;
 }
 
 #backdev_tile {
-  background-color: #00C176;
+  background-color: #12b0c5;
 }
 
 #presentation_tile {
-  background-color: #8e44ad;
+  background-color: #A2BF4B;
+}
+
+/*  ICON BACKGROUND  */
+
+.icon-background {
+  pointer-events: none;
+  width: 100%!important;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0.1;
+  font-size: 5px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /*  GROUPING  */
@@ -171,8 +200,15 @@ pgrid
 
 /*  NAV BAR  */
 
+.logo {
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 700px;
+}
+
 #nav-bar {
-  background: #00C176;
+  background: #12b0c5;
   width: 1258px;
   margin-left: auto;
   margin-right: auto;
@@ -185,6 +221,7 @@ pgrid
   display: block;
   zoom: 1;
 }
+
 #nav-bar ul:after {
   content: " ";
   display: block;
@@ -281,5 +318,36 @@ pgrid
     box-sizing: border-box;
     border-bottom: 1px solid #fb998c;
   }
-
 }
+
+#sign_up {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+  h2{
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    margin-top: 50px;
+  }
+
+  #title {
+    background-color: #9c4274;
+  }
+
+  #form {
+    background-color: #eb9c3c;
+    height: 240px;
+    font-size: 20px;
+  }
+
+  #links {
+    background-color: #A2BF4B;
+    height: 240px;
+  }
+
+  #sign_in {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+  }

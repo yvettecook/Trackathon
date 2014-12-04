@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   mount JasmineRails::Engine => '/specs' if defined?(JasmineRails)
   mount Dashing::Engine, at: Dashing.config.engine_path
   
+  get 'about', to: 'home#about', as: :about
+
   resources :hackathons, shallow: true do #  why have we got shallow?
     resources :projects
   end
