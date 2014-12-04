@@ -136,3 +136,23 @@
 		width: 100%;
 	}
 }
+
+.current_hackathons {
+  background: #00C176;
+  width: 1258px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+.current_hackathons p {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	padding-left: 10px;
+	padding-top: 10px;
+	color: white;
+	float: left;
+	margin: 0 0 0 0;
+}
+

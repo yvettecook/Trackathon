@@ -14,7 +14,7 @@
 	<div class="col span_5_of_5">
 		<nav id="nav-bar">
 			<ul>
-					<img class="logo" src="images/Trackathon_logo.png" height="26" width="126" >
+					<a href="/"><img class="logo" src="/images/Trackathon_logo.png" height="26" width="126" ></a>
 					<li><a class="new_hackathon_link"href="/">Home</a></li>
 				<% if user_signed_in? %>
 					<li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
