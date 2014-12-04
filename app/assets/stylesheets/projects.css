@@ -2,7 +2,6 @@
 
 #new_project {
   box-sizing: border-box;
-  height: 300px;
   display: table;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -10,15 +9,16 @@
   background-color: #FF003C;
 }
 
-  #new_project.new_project {
+  #new_project {
+    
     margin: 0;
     padding: 0;
     vertical-align: middle;
     display: table-cell;
     font-weight: 700;
     text-align: center;
+    height: 240px;
   }
-
 
 /*  SECTIONS  */
 .section {
