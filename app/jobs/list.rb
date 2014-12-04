@@ -25,8 +25,8 @@ total_lines = 0
       number = 0
 
       data.each do |week|
-        number += week[1]
-        number += week[2]
+        number += week[1] if week[1]
+        number += week[2] if week[2]
       end
 
       name = repo[:name]
