@@ -1,7 +1,16 @@
 require 'net/http'
 require 'json'
 
-repos = [{owner: "yvettecook", name: "trackathon"}, {owner: "MadameSardine", name: "pandapop"}, {owner: "Scully87", name: "FATS_badgr"}, {owner: "jamesascarter", name: "stack-overtube-frontend"}, {owner: "karinnielsen", name: "Final-Project-POSTit"}, {owner: "Schlap", name: "project-noderover"}]
+repos = []
+hackathon = Hackathon.last
+hackathon.projects.each do |project|
+  repo = {}
+  url = project.gitrepo.split('/')
+  repo[:owner] = url[3]
+  repo[:name] = url[4]
+  repos.push(repo)
+end
+
 
 repo_info = Hash.new{}
 total_lines = 0
@@ -16,8 +25,8 @@ total_lines = 0
       number = 0
 
       data.each do |week|
-        number += week[1]
-        number += week[2]
+        number += week[1] if week[1]
+        number += week[2] if week[2]
       end
 
       name = repo[:name]
