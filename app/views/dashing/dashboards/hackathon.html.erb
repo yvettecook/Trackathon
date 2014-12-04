@@ -11,7 +11,7 @@
       <div id="welcome-widget" data-id="welcome" data-view="Text" data-title="<%= @name.titleize %>" data-text="This is your hackathon dashboard." data-moreinfo="Protip: You can drag the widgets around!"></div>
     </li>
 
-    <li data-row="1" data-col="2" data-sizex="3" data-sizey="1">
+    <li data-row="1" data-col="2" data-sizex="2" data-sizey="1">
       <div id="countdown-widget" data-view="Countdown" data-title="Time remaining" data-end="<%= @end_time %>"></div>
       <i class="icon-time icon-background"></i>
     </li>
@@ -25,18 +25,13 @@
       <i class="icon-twitter icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="5" data-sizex="1" data-sizey="1">
-      <div data-id="counter" data-view="Number" data-title="Sightings of Sean's Jumper" style="background-color:#96bf48;"></div>
-      <i class="icon-heart icon-background"></i>
-    </li>
-
     <li data-row="3" data-col="2" data-sizex="1" data-sizey="1">
       <div data-id="beer" data-view="Number" data-title="Need for Beer" style="background-color:#46BBB3;"></div>
       <i class="icon-heart icon-background"></i>
     </li>
 
-    <li data-row="1" data-col="1" data-sizex="1" data-sizey="2">
-      <div data-id="gitlines" data-view="List" data-unordered="false" data-title="Lines of Code" data-moreinfo="# of times said around the office"></div>
+    <li data-row="2" data-col="5" data-sizex="1" data-sizey="2">
+      <div data-id="gitlines" data-title-total="Total Lines of Code" data-view="List" data-unordered="false" data-title="Lines of Code" data-moreinfo="# of times said around the office"></div>
     </li>
 
     <% @projects.each do |project| %>
