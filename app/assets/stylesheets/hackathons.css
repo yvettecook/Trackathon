@@ -86,3 +86,23 @@
 		font-size: 15px;
 	}
 
+
+	input[type=submit] {
+	  -webkit-border-radius: 0;
+	  -moz-border-radius: 0;
+	  border-radius: 0px;
+	  color: #ffffff;
+	  height: 46px;
+	  font-size: 20px;
+	  background: #dc5945;
+	  padding: 12px 17px 16px 20px;
+	  border: solid #050505 1px;
+	  text-decoration: none;
+	  margin-top: 10px;
+	}
+
+	input[type=submit]:hover {
+	  background: #ab3321;
+	  text-decoration: none;
+	}
+
