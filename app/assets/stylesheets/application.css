@@ -171,6 +171,11 @@ pgrid
 
 /*  NAV BAR  */
 
+.logo {
+  float: left;
+  padding-top: 10px;
+}
+
 #nav-bar {
   background: #00C176;
   width: 1258px;
@@ -185,6 +190,7 @@ pgrid
   display: block;
   zoom: 1;
 }
+
 #nav-bar ul:after {
   content: " ";
   display: block;

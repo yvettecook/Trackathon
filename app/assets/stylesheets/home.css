@@ -19,9 +19,9 @@
 
 /* TILE STYING */
 
-#welcome_tile, #new_hackathon_tile, #hackathon, #team {
+#welcome_tile, #hackathon, #team {
   box-sizing: border-box;
-  height: 300px;
+  height: 240px;
   display: table;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
@@ -29,7 +29,7 @@
 }
 
 #welcome_tile {
-  background-color: #FF8A00;
+  background-color: #662B4C;
 }
 
    h1 {
@@ -40,12 +40,29 @@
     font-weight: 400;
   }
 
-#new_hackathon_tile {
-  background-color: #00C176;
+#new_hackathon {
+  background-color: #9c4274;
 }
+	
+	.new_hackathon_tile_h2 {
+		margin: 10px;
+	}
+	
+	
+	.new_hackathon_link {
+		display: inline-block;
+		font-family: 'Open Sans', sans-serif;
+		color: white;
+		margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    display: table-cell;
+    font-weight: 400;
+    text-align: center;
+	}
 
 #hackathon {
-  background-color: #FF003C;
+  background-color: #12b0c5;
 }
 
 #team {
