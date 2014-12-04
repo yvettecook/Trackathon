@@ -46,16 +46,20 @@
 #title_tile {
   box-sizing: border-box;
   height: 240px;
-  background-color: #12b0c5;
+  background-color: #f1c40f;
+  font-family: 'Open Sans', sans-serif;
 }
 
    h2 {
     font-weight: 400;
     font-size: 30px;
-    font-family: 'Open Sans', sans-serif;
     color: white;
     opacity: 0.7;
     margin-top: 50px;
+  }
+
+  #hackathon_link {
+    vertical-align: baseline;
   }
 
 #project-description {
@@ -63,7 +67,7 @@
   height: 240px;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #E54F2F;
+  background-color: #dc5945;
 }
 
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
@@ -75,6 +79,7 @@
   display: table-cell;
   text-align: center;
   vertical-align: middle;
+  font-size: 20px;
 }
 
   h3 {
@@ -92,23 +97,23 @@
 
 
 #product_tile {
-  background-color: #FF003C;
+  background-color: #dc5945;
 }
 
 #design_tile {
-  background-color: #d35400;
+  background-color: #eb9c3c;
 }
 
 #frontdev_tile {
-  background-color: #88C100;
+  background-color: #9c4274;
 }
 
 #backdev_tile {
-  background-color: #00C176;
+  background-color: #12b0c5;
 }
 
 #presentation_tile {
-  background-color: #8e44ad;
+  background-color: #A2BF4B;
 }
 
 /*  GROUPING  */
@@ -179,7 +184,7 @@ pgrid
 }
 
 #nav-bar {
-  background: #00C176;
+  background: #A2BF4B;
   width: 1258px;
   margin-left: auto;
   margin-right: auto;
