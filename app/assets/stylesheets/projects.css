@@ -7,13 +7,14 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #12b0c5;
+  background-color: #eb9c3c;
 }
 
   #new_project {
     
     margin: 0;
     padding: 0;
+    padding-left: 15px;
     vertical-align: middle;
     display: table-cell;
     font-weight: 700;
@@ -40,5 +41,13 @@ input.milestone
 {
   width: 30px;
   height: 30px;
+}
+
+input#project_gitrepo {
+  width: 470px;
+}
+
+input#create {
+  margin-left: 10px;
 }
 
