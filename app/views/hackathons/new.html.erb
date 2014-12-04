@@ -9,7 +9,7 @@
 		<div class="col span_4_of_5" id="new_hackathon">
 			<%= form_for Hackathon.new, html: {multipart: true} do |f| %> <!-- should be @hackathon -->
 			<%= f.label :name %>
-			<%= f.text_field :name %><br>
+			<%= f.text_field :name %><br><br>
 			<%= f.label :end_time %>
 			<%= f.datetime_select :end_time %>
 		</div>
