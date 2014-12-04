@@ -46,6 +46,7 @@
 	
 	.new_hackathon_tile_h2 {
 		margin: 10px;
+    margin-bottom: 40px;
 	}
 	
 	
@@ -60,6 +61,23 @@
     font-weight: 400;
     text-align: center;
 	}
+
+  a.new_hackathon_tile {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #ffffff;
+    height: 46px;
+    font-size: 20px;
+    background: #9c4274;
+    padding: 12px 17px 16px 20px;
+    border: solid #050505 1px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background: #662B4C;
+  }
 
 .hackathon {
   background-color: #eb9c3c;
