@@ -86,17 +86,6 @@
 		font-size: 15px;
 	}
 
-<<<<<<< HEAD
-#submit {
-  background-color: #eb9c3c;
-}
-
-	input {
-		height: 40px;
-		width: 220px;
-		font-size: 25px;
-		padding-right: 10px;
-	}
 
 	input[type=submit] {
 	  -webkit-border-radius: 0;
@@ -116,5 +105,4 @@
 	  background: #ab3321;
 	  text-decoration: none;
 	}
-=======
->>>>>>> 116d4a838dc04fa822fdbbafedee05cb5ad551f9
+

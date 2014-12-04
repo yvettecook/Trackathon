@@ -43,15 +43,15 @@ input.milestone
   height: 30px;
 }
 
-<<<<<<< HEAD
 input#project_gitrepo {
   width: 470px;
 }
 
 input#create {
   margin-left: 10px;
+  margin-top: 1px;
 }
-=======
+
 #submit {
   background-color: #eb9c3c;
 }
@@ -62,8 +62,6 @@ input#create {
     font-size: 25px;
     padding-right: 10px;
   }
-
-  
 
   input[type=submit] {
     -webkit-border-radius: 0;
@@ -84,5 +82,24 @@ input#create {
     text-decoration: none;
   }
 
->>>>>>> 116d4a838dc04fa822fdbbafedee05cb5ad551f9
+
+   a#github_link {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #ffffff;
+    height: 46px;
+    font-size: 20px;
+    background: #eb9c3c;
+    padding: 12px 17px 16px 20px;
+    border: solid #050505 1px;
+    text-decoration: none;
+  }
+
+  a#github_link:hover {
+    background: #A2BF4B;
+  }
+
+
+
 
