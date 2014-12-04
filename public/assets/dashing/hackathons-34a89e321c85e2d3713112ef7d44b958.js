@@ -31071,13 +31071,13 @@ var prepareString = "a"[0] != "a",
 
 ;
 (function() {
-  console.log("Yeah! The dashboard has started!");
+  console.log("Fuck yeah! The dashboard has started!");
 
   Dashing.on('ready', function() {
     var contentWidth;
     Dashing.widget_margins || (Dashing.widget_margins = [5, 5]);
-    Dashing.widget_base_dimensions || (Dashing.widget_base_dimensions = [300, 360]);
-    Dashing.numColumns || (Dashing.numColumns = 4);
+    Dashing.widget_base_dimensions || (Dashing.widget_base_dimensions = [370, 340]);
+    Dashing.numColumns || (Dashing.numColumns = 5);
     contentWidth = (Dashing.widget_base_dimensions[0] + Dashing.widget_margins[0] * 2) * Dashing.numColumns;
     return Batman.setImmediate(function() {
       $('.gridster').width(contentWidth);
@@ -31096,6 +31096,226 @@ var prepareString = "a"[0] != "a",
   });
 
 }).call(this);
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Dashing.Add = (function(_super) {
+    __extends(Add, _super);
+
+    function Add() {
+      return Add.__super__.constructor.apply(this, arguments);
+    }
+
+    Add.prototype.ready = function() {};
+
+    Add.prototype.onData = function(data) {};
+
+    return Add;
+
+  })(Dashing.Widget);
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Dashing.Clock = (function(_super) {
+    __extends(Clock, _super);
+
+    function Clock() {
+      this.startTime = __bind(this.startTime, this);
+      return Clock.__super__.constructor.apply(this, arguments);
+    }
+
+    Clock.prototype.ready = function() {
+      return setInterval(this.startTime, 500);
+    };
+
+    Clock.prototype.startTime = function() {
+      var h, m, s, today;
+      today = new Date();
+      h = today.getHours();
+      m = today.getMinutes();
+      s = today.getSeconds();
+      m = this.formatTime(m);
+      s = this.formatTime(s);
+      this.set('time', h + ":" + m + ":" + s);
+      return this.set('date', today.toDateString());
+    };
+
+    Clock.prototype.formatTime = function(i) {
+      if (i < 10) {
+        return "0" + i;
+      } else {
+        return i;
+      }
+    };
+
+    Clock.prototype.truth = function() {
+      return true;
+    };
+
+    return Clock;
+
+  })(Dashing.Widget);
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Dashing.Countdown = (function(_super) {
+    __extends(Countdown, _super);
+
+    function Countdown() {
+      this.startCountdown = __bind(this.startCountdown, this);
+      return Countdown.__super__.constructor.apply(this, arguments);
+    }
+
+    Countdown.prototype.ready = function() {
+      return setInterval(this.startCountdown, 500);
+    };
+
+    Countdown.prototype.startCountdown = function() {
+      var current_timestamp, d, dayname, end_timestamp, h, i, m, s, seconds_until_end, _i, _results;
+      current_timestamp = Math.round(new Date().getTime() / 1000);
+      end_timestamp = Math.round(Date.parse($(this.node).find(".more-info").html()) / 1000);
+      seconds_until_end = end_timestamp - current_timestamp;
+      if (seconds_until_end < 0) {
+        this.set('timeleft', "TIME UP!");
+        _results = [];
+        for (i = _i = 0; _i <= 100; i = _i += 1) {
+          _results.push($(this.node).fadeTo('slow', 0.5).fadeTo('slow', 1.0));
+        }
+        return _results;
+      } else {
+        d = Math.floor(seconds_until_end / 86400);
+        h = Math.floor((seconds_until_end - (d * 86400)) / 3600);
+        m = Math.floor((seconds_until_end - (d * 86400) - (h * 3600)) / 60);
+        s = seconds_until_end - (d * 86400) - (h * 3600) - (m * 60);
+        if (d > 0) {
+          dayname = 'day';
+          if (d > 1) {
+            dayname = 'days';
+          }
+          return this.set('timeleft', d + " " + dayname + " " + this.formatTime(h) + " hrs " + this.formatTime(m) + " min " + this.formatTime(s) + " s");
+        } else {
+          return this.set('timeleft', this.formatTime(h) + " h " + this.formatTime(m) + " m " + this.formatTime(s));
+        }
+      }
+    };
+
+    Countdown.prototype.formatTime = function(i) {
+      return i;
+    };
+
+    return Countdown;
+
+  })(Dashing.Widget);
+
+}).call(this);
+(function() {
+  var __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Dashing.Project = (function(_super) {
+    __extends(Project, _super);
+
+    function Project() {
+      return Project.__super__.constructor.apply(this, arguments);
+    }
+
+    Project.accessor('value', Dashing.AnimatedValue);
+
+    Project.prototype.ready = function() {
+      var meter;
+      meter = $(this.node).find(".project");
+      meter.attr("data-bgcolor", meter.css("background-color"));
+      meter.attr("data-fgcolor", meter.css("color"));
+      return meter.knob();
+    };
+
+    Project.prototype.onData = function(data) {
+      Project.__super__.onData.apply(this, arguments);
+      return this.observe('value', function(value) {
+        return $(this.node).find(".project").val(value).trigger('change');
+      });
+    };
+
+    return Project;
+
+  })(Dashing.Widget);
+
+}).call(this);
+(function() {
+  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    __hasProp = {}.hasOwnProperty,
+    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
+
+  Dashing.Tweets = (function(_super) {
+    __extends(Tweets, _super);
+
+    function Tweets() {
+      this.nextComment = __bind(this.nextComment, this);
+      return Tweets.__super__.constructor.apply(this, arguments);
+    }
+
+    Tweets.accessor('quote', function() {
+      var _ref;
+      return "“" + ((_ref = this.get('current_comment')) != null ? _ref.body : void 0) + "”";
+    });
+
+    Tweets.prototype.ready = function() {
+      this.currentIndex = 0;
+      this.commentElem = $(this.node).find('.comment-container');
+      this.nextComment();
+      return this.startCarousel();
+    };
+
+    Tweets.prototype.onData = function(data) {
+      return this.currentIndex = 0;
+    };
+
+    Tweets.prototype.startCarousel = function() {
+      return setInterval(this.nextComment, 8000);
+    };
+
+    Tweets.prototype.nextComment = function() {
+      var comments;
+      comments = this.get('comments');
+      if (comments) {
+        return this.commentElem.fadeOut((function(_this) {
+          return function() {
+            _this.currentIndex = (_this.currentIndex + 1) % comments.length;
+            _this.set('current_comment', comments[_this.currentIndex]);
+            return _this.commentElem.fadeIn();
+          };
+        })(this));
+      }
+    };
+
+    return Tweets;
+
+  })(Dashing.Comments);
+
+}).call(this);
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+
+;
 (function() {
   Dashing.gridsterLayout = function(positions) {
     var index, widget, widgets, _i, _len, _results;
@@ -31473,737 +31693,9 @@ var prepareString = "a"[0] != "a",
 //
 
 ;
-(function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
-  Dashing.Add = (function(_super) {
-    __extends(Add, _super);
 
-    function Add() {
-      return Add.__super__.constructor.apply(this, arguments);
-    }
 
-    Add.prototype.ready = function() {};
 
-    Add.prototype.onData = function(data) {};
 
-    return Add;
-
-  })(Dashing.Widget);
-
-}).call(this);
-(function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
-  Dashing.Clock = (function(_super) {
-    __extends(Clock, _super);
-
-    function Clock() {
-      this.startTime = __bind(this.startTime, this);
-      return Clock.__super__.constructor.apply(this, arguments);
-    }
-
-    Clock.prototype.ready = function() {
-      return setInterval(this.startTime, 500);
-    };
-
-    Clock.prototype.startTime = function() {
-      var h, m, s, today;
-      today = new Date();
-      h = today.getHours();
-      m = today.getMinutes();
-      s = today.getSeconds();
-      m = this.formatTime(m);
-      s = this.formatTime(s);
-      this.set('time', h + ":" + m + ":" + s);
-      return this.set('date', today.toDateString());
-    };
-
-    Clock.prototype.formatTime = function(i) {
-      if (i < 10) {
-        return "0" + i;
-      } else {
-        return i;
-      }
-    };
-
-    Clock.prototype.truth = function() {
-      return true;
-    };
-
-    return Clock;
-
-  })(Dashing.Widget);
-
-}).call(this);
-(function() {
-  var __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
-    __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
-  Dashing.Countdown = (function(_super) {
-    __extends(Countdown, _super);
-
-    function Countdown() {
-      this.startCountdown = __bind(this.startCountdown, this);
-      return Countdown.__super__.constructor.apply(this, arguments);
-    }
-
-    Countdown.prototype.ready = function() {
-      return setInterval(this.startCountdown, 500);
-    };
-
-    Countdown.prototype.startCountdown = function() {
-      var current_timestamp, d, dayname, end_timestamp, h, i, m, s, seconds_until_end, _i, _results;
-      current_timestamp = Math.round(new Date().getTime() / 1000);
-      end_timestamp = Math.round(Date.parse($(this.node).find(".more-info").html()) / 1000);
-      seconds_until_end = end_timestamp - current_timestamp;
-      if (seconds_until_end < 0) {
-        this.set('timeleft', "TIME UP!");
-        _results = [];
-        for (i = _i = 0; _i <= 100; i = _i += 1) {
-          _results.push($(this.node).fadeTo('slow', 0.5).fadeTo('slow', 1.0));
-        }
-        return _results;
-      } else {
-        d = Math.floor(seconds_until_end / 86400);
-        h = Math.floor((seconds_until_end - (d * 86400)) / 3600);
-        m = Math.floor((seconds_until_end - (d * 86400) - (h * 3600)) / 60);
-        s = seconds_until_end - (d * 86400) - (h * 3600) - (m * 60);
-        if (d > 0) {
-          dayname = 'day';
-          if (d > 1) {
-            dayname = 'days';
-          }
-          return this.set('timeleft', d + " " + dayname + " " + this.formatTime(h) + ":" + this.formatTime(m) + ":" + this.formatTime(s));
-        } else {
-          return this.set('timeleft', this.formatTime(h) + ":" + this.formatTime(m) + ":" + this.formatTime(s));
-        }
-      }
-    };
-
-    Countdown.prototype.formatTime = function(i) {
-      if (i < 10) {
-        return "0" + i;
-      } else {
-        return i;
-      }
-    };
-
-    return Countdown;
-
-  })(Dashing.Widget);
-
-}).call(this);
-(function() {
-  var __hasProp = {}.hasOwnProperty,
-    __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
-
-  Dashing.Project = (function(_super) {
-    __extends(Project, _super);
-
-    function Project() {
-      return Project.__super__.constructor.apply(this, arguments);
-    }
-
-    Project.accessor('value', Dashing.AnimatedValue);
-
-    Project.prototype.ready = function() {
-      var meter;
-      meter = $(this.node).find(".project");
-      meter.attr("data-bgcolor", meter.css("background-color"));
-      meter.attr("data-fgcolor", meter.css("color"));
-      return meter.knob();
-    };
-
-    Project.prototype.onData = function(data) {
-      Project.__super__.onData.apply(this, arguments);
-      return this.observe('value', function(value) {
-        return $(this.node).find(".project").val(value).trigger('change');
-      });
-    };
-
-    return Project;
-
-  })(Dashing.Widget);
-
-}).call(this);
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
-//
-
-;
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// the compiled file.
-//
-// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
-// GO AFTER THE REQUIRES BELOW.
-//
-
-
-
-
-
-;
-(function($, undefined) {
-
-/**
- * Unobtrusive scripting adapter for jQuery
- * https://github.com/rails/jquery-ujs
- *
- * Requires jQuery 1.8.0 or later.
- *
- * Released under the MIT license
- *
- */
-
-  // Cut down on the number of issues from people inadvertently including jquery_ujs twice
-  // by detecting and raising an error when it happens.
-  if ( $.rails !== undefined ) {
-    $.error('jquery-ujs has already been loaded!');
-  }
-
-  // Shorthand to make it a little easier to call public rails functions from within rails.js
-  var rails;
-  var $document = $(document);
-
-  $.rails = rails = {
-    // Link elements bound by jquery-ujs
-    linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote], a[data-disable-with], a[data-disable]',
-
-    // Button elements bound by jquery-ujs
-    buttonClickSelector: 'button[data-remote]:not(form button), button[data-confirm]:not(form button)',
-
-    // Select elements bound by jquery-ujs
-    inputChangeSelector: 'select[data-remote], input[data-remote], textarea[data-remote]',
-
-    // Form elements bound by jquery-ujs
-    formSubmitSelector: 'form',
-
-    // Form input elements bound by jquery-ujs
-    formInputClickSelector: 'form input[type=submit], form input[type=image], form button[type=submit], form button:not([type]), input[type=submit][form], input[type=image][form], button[type=submit][form], button[form]:not([type])',
-
-    // Form input elements disabled during form submission
-    disableSelector: 'input[data-disable-with]:enabled, button[data-disable-with]:enabled, textarea[data-disable-with]:enabled, input[data-disable]:enabled, button[data-disable]:enabled, textarea[data-disable]:enabled',
-
-    // Form input elements re-enabled after form submission
-    enableSelector: 'input[data-disable-with]:disabled, button[data-disable-with]:disabled, textarea[data-disable-with]:disabled, input[data-disable]:disabled, button[data-disable]:disabled, textarea[data-disable]:disabled',
-
-    // Form required input elements
-    requiredInputSelector: 'input[name][required]:not([disabled]),textarea[name][required]:not([disabled])',
-
-    // Form file input elements
-    fileInputSelector: 'input[type=file]',
-
-    // Link onClick disable selector with possible reenable after remote submission
-    linkDisableSelector: 'a[data-disable-with], a[data-disable]',
-
-    // Button onClick disable selector with possible reenable after remote submission
-    buttonDisableSelector: 'button[data-remote][data-disable-with], button[data-remote][data-disable]',
-
-    // Make sure that every Ajax request sends the CSRF token
-    CSRFProtection: function(xhr) {
-      var token = $('meta[name="csrf-token"]').attr('content');
-      if (token) xhr.setRequestHeader('X-CSRF-Token', token);
-    },
-
-    // making sure that all forms have actual up-to-date token(cached forms contain old one)
-    refreshCSRFTokens: function(){
-      var csrfToken = $('meta[name=csrf-token]').attr('content');
-      var csrfParam = $('meta[name=csrf-param]').attr('content');
-      $('form input[name="' + csrfParam + '"]').val(csrfToken);
-    },
-
-    // Triggers an event on an element and returns false if the event result is false
-    fire: function(obj, name, data) {
-      var event = $.Event(name);
-      obj.trigger(event, data);
-      return event.result !== false;
-    },
-
-    // Default confirm dialog, may be overridden with custom confirm dialog in $.rails.confirm
-    confirm: function(message) {
-      return confirm(message);
-    },
-
-    // Default ajax function, may be overridden with custom function in $.rails.ajax
-    ajax: function(options) {
-      return $.ajax(options);
-    },
-
-    // Default way to get an element's href. May be overridden at $.rails.href.
-    href: function(element) {
-      return element.attr('href');
-    },
-
-    // Submits "remote" forms and links with ajax
-    handleRemote: function(element) {
-      var method, url, data, elCrossDomain, crossDomain, withCredentials, dataType, options;
-
-      if (rails.fire(element, 'ajax:before')) {
-        elCrossDomain = element.data('cross-domain');
-        crossDomain = elCrossDomain === undefined ? null : elCrossDomain;
-        withCredentials = element.data('with-credentials') || null;
-        dataType = element.data('type') || ($.ajaxSettings && $.ajaxSettings.dataType);
-
-        if (element.is('form')) {
-          method = element.attr('method');
-          url = element.attr('action');
-          data = element.serializeArray();
-          // memoized value from clicked submit button
-          var button = element.data('ujs:submit-button');
-          if (button) {
-            data.push(button);
-            element.data('ujs:submit-button', null);
-          }
-        } else if (element.is(rails.inputChangeSelector)) {
-          method = element.data('method');
-          url = element.data('url');
-          data = element.serialize();
-          if (element.data('params')) data = data + "&" + element.data('params');
-        } else if (element.is(rails.buttonClickSelector)) {
-          method = element.data('method') || 'get';
-          url = element.data('url');
-          data = element.serialize();
-          if (element.data('params')) data = data + "&" + element.data('params');
-        } else {
-          method = element.data('method');
-          url = rails.href(element);
-          data = element.data('params') || null;
-        }
-
-        options = {
-          type: method || 'GET', data: data, dataType: dataType,
-          // stopping the "ajax:beforeSend" event will cancel the ajax request
-          beforeSend: function(xhr, settings) {
-            if (settings.dataType === undefined) {
-              xhr.setRequestHeader('accept', '*/*;q=0.5, ' + settings.accepts.script);
-            }
-            if (rails.fire(element, 'ajax:beforeSend', [xhr, settings])) {
-              element.trigger('ajax:send', xhr);
-            } else {
-              return false;
-            }
-          },
-          success: function(data, status, xhr) {
-            element.trigger('ajax:success', [data, status, xhr]);
-          },
-          complete: function(xhr, status) {
-            element.trigger('ajax:complete', [xhr, status]);
-          },
-          error: function(xhr, status, error) {
-            element.trigger('ajax:error', [xhr, status, error]);
-          },
-          crossDomain: crossDomain
-        };
-
-        // There is no withCredentials for IE6-8 when
-        // "Enable native XMLHTTP support" is disabled
-        if (withCredentials) {
-          options.xhrFields = {
-            withCredentials: withCredentials
-          };
-        }
-
-        // Only pass url to `ajax` options if not blank
-        if (url) { options.url = url; }
-
-        return rails.ajax(options);
-      } else {
-        return false;
-      }
-    },
-
-    // Handles "data-method" on links such as:
-    // <a href="/users/5" data-method="delete" rel="nofollow" data-confirm="Are you sure?">Delete</a>
-    handleMethod: function(link) {
-      var href = rails.href(link),
-        method = link.data('method'),
-        target = link.attr('target'),
-        csrfToken = $('meta[name=csrf-token]').attr('content'),
-        csrfParam = $('meta[name=csrf-param]').attr('content'),
-        form = $('<form method="post" action="' + href + '"></form>'),
-        metadataInput = '<input name="_method" value="' + method + '" type="hidden" />';
-
-      if (csrfParam !== undefined && csrfToken !== undefined) {
-        metadataInput += '<input name="' + csrfParam + '" value="' + csrfToken + '" type="hidden" />';
-      }
-
-      if (target) { form.attr('target', target); }
-
-      form.hide().append(metadataInput).appendTo('body');
-      form.submit();
-    },
-
-    // Helper function that returns form elements that match the specified CSS selector
-    // If form is actually a "form" element this will return associated elements outside the from that have
-    // the html form attribute set
-    formElements: function(form, selector) {
-      return form.is('form') ? $(form[0].elements).filter(selector) : form.find(selector);
-    },
-
-    /* Disables form elements:
-      - Caches element value in 'ujs:enable-with' data store
-      - Replaces element text with value of 'data-disable-with' attribute
-      - Sets disabled property to true
-    */
-    disableFormElements: function(form) {
-      rails.formElements(form, rails.disableSelector).each(function() {
-        rails.disableFormElement($(this));
-      });
-    },
-
-    disableFormElement: function(element) {
-      var method, replacement;
-
-      method = element.is('button') ? 'html' : 'val';
-      replacement = element.data('disable-with');
-
-      element.data('ujs:enable-with', element[method]());
-      if (replacement !== undefined) {
-        element[method](replacement);
-      }
-
-      element.prop('disabled', true);
-    },
-
-    /* Re-enables disabled form elements:
-      - Replaces element text with cached value from 'ujs:enable-with' data store (created in `disableFormElements`)
-      - Sets disabled property to false
-    */
-    enableFormElements: function(form) {
-      rails.formElements(form, rails.enableSelector).each(function() {
-        rails.enableFormElement($(this));
-      });
-    },
-
-    enableFormElement: function(element) {
-      var method = element.is('button') ? 'html' : 'val';
-      if (element.data('ujs:enable-with')) element[method](element.data('ujs:enable-with'));
-      element.prop('disabled', false);
-    },
-
-   /* For 'data-confirm' attribute:
-      - Fires `confirm` event
-      - Shows the confirmation dialog
-      - Fires the `confirm:complete` event
-
-      Returns `true` if no function stops the chain and user chose yes; `false` otherwise.
-      Attaching a handler to the element's `confirm` event that returns a `falsy` value cancels the confirmation dialog.
-      Attaching a handler to the element's `confirm:complete` event that returns a `falsy` value makes this function
-      return false. The `confirm:complete` event is fired whether or not the user answered true or false to the dialog.
-   */
-    allowAction: function(element) {
-      var message = element.data('confirm'),
-          answer = false, callback;
-      if (!message) { return true; }
-
-      if (rails.fire(element, 'confirm')) {
-        answer = rails.confirm(message);
-        callback = rails.fire(element, 'confirm:complete', [answer]);
-      }
-      return answer && callback;
-    },
-
-    // Helper function which checks for blank inputs in a form that match the specified CSS selector
-    blankInputs: function(form, specifiedSelector, nonBlank) {
-      var inputs = $(), input, valueToCheck,
-          selector = specifiedSelector || 'input,textarea',
-          allInputs = form.find(selector);
-
-      allInputs.each(function() {
-        input = $(this);
-        valueToCheck = input.is('input[type=checkbox],input[type=radio]') ? input.is(':checked') : input.val();
-        // If nonBlank and valueToCheck are both truthy, or nonBlank and valueToCheck are both falsey
-        if (!valueToCheck === !nonBlank) {
-
-          // Don't count unchecked required radio if other radio with same name is checked
-          if (input.is('input[type=radio]') && allInputs.filter('input[type=radio]:checked[name="' + input.attr('name') + '"]').length) {
-            return true; // Skip to next input
-          }
-
-          inputs = inputs.add(input);
-        }
-      });
-      return inputs.length ? inputs : false;
-    },
-
-    // Helper function which checks for non-blank inputs in a form that match the specified CSS selector
-    nonBlankInputs: function(form, specifiedSelector) {
-      return rails.blankInputs(form, specifiedSelector, true); // true specifies nonBlank
-    },
-
-    // Helper function, needed to provide consistent behavior in IE
-    stopEverything: function(e) {
-      $(e.target).trigger('ujs:everythingStopped');
-      e.stopImmediatePropagation();
-      return false;
-    },
-
-    //  replace element's html with the 'data-disable-with' after storing original html
-    //  and prevent clicking on it
-    disableElement: function(element) {
-      var replacement = element.data('disable-with');
-
-      element.data('ujs:enable-with', element.html()); // store enabled state
-      if (replacement !== undefined) {
-        element.html(replacement);
-      }
-
-      element.bind('click.railsDisable', function(e) { // prevent further clicking
-        return rails.stopEverything(e);
-      });
-    },
-
-    // restore element to its original state which was disabled by 'disableElement' above
-    enableElement: function(element) {
-      if (element.data('ujs:enable-with') !== undefined) {
-        element.html(element.data('ujs:enable-with')); // set to old enabled state
-        element.removeData('ujs:enable-with'); // clean up cache
-      }
-      element.unbind('click.railsDisable'); // enable element
-    }
-  };
-
-  if (rails.fire($document, 'rails:attachBindings')) {
-
-    $.ajaxPrefilter(function(options, originalOptions, xhr){ if ( !options.crossDomain ) { rails.CSRFProtection(xhr); }});
-
-    $document.delegate(rails.linkDisableSelector, 'ajax:complete', function() {
-        rails.enableElement($(this));
-    });
-
-    $document.delegate(rails.buttonDisableSelector, 'ajax:complete', function() {
-        rails.enableFormElement($(this));
-    });
-
-    $document.delegate(rails.linkClickSelector, 'click.rails', function(e) {
-      var link = $(this), method = link.data('method'), data = link.data('params'), metaClick = e.metaKey || e.ctrlKey;
-      if (!rails.allowAction(link)) return rails.stopEverything(e);
-
-      if (!metaClick && link.is(rails.linkDisableSelector)) rails.disableElement(link);
-
-      if (link.data('remote') !== undefined) {
-        if (metaClick && (!method || method === 'GET') && !data) { return true; }
-
-        var handleRemote = rails.handleRemote(link);
-        // response from rails.handleRemote() will either be false or a deferred object promise.
-        if (handleRemote === false) {
-          rails.enableElement(link);
-        } else {
-          handleRemote.error( function() { rails.enableElement(link); } );
-        }
-        return false;
-
-      } else if (link.data('method')) {
-        rails.handleMethod(link);
-        return false;
-      }
-    });
-
-    $document.delegate(rails.buttonClickSelector, 'click.rails', function(e) {
-      var button = $(this);
-
-      if (!rails.allowAction(button)) return rails.stopEverything(e);
-
-      if (button.is(rails.buttonDisableSelector)) rails.disableFormElement(button);
-
-      var handleRemote = rails.handleRemote(button);
-      // response from rails.handleRemote() will either be false or a deferred object promise.
-      if (handleRemote === false) {
-        rails.enableFormElement(button);
-      } else {
-        handleRemote.error( function() { rails.enableFormElement(button); } );
-      }
-      return false;
-    });
-
-    $document.delegate(rails.inputChangeSelector, 'change.rails', function(e) {
-      var link = $(this);
-      if (!rails.allowAction(link)) return rails.stopEverything(e);
-
-      rails.handleRemote(link);
-      return false;
-    });
-
-    $document.delegate(rails.formSubmitSelector, 'submit.rails', function(e) {
-      var form = $(this),
-        remote = form.data('remote') !== undefined,
-        blankRequiredInputs,
-        nonBlankFileInputs;
-
-      if (!rails.allowAction(form)) return rails.stopEverything(e);
-
-      // skip other logic when required values are missing or file upload is present
-      if (form.attr('novalidate') == undefined) {
-        blankRequiredInputs = rails.blankInputs(form, rails.requiredInputSelector);
-        if (blankRequiredInputs && rails.fire(form, 'ajax:aborted:required', [blankRequiredInputs])) {
-          return rails.stopEverything(e);
-        }
-      }
-
-      if (remote) {
-        nonBlankFileInputs = rails.nonBlankInputs(form, rails.fileInputSelector);
-        if (nonBlankFileInputs) {
-          // slight timeout so that the submit button gets properly serialized
-          // (make it easy for event handler to serialize form without disabled values)
-          setTimeout(function(){ rails.disableFormElements(form); }, 13);
-          var aborted = rails.fire(form, 'ajax:aborted:file', [nonBlankFileInputs]);
-
-          // re-enable form elements if event bindings return false (canceling normal form submission)
-          if (!aborted) { setTimeout(function(){ rails.enableFormElements(form); }, 13); }
-
-          return aborted;
-        }
-
-        rails.handleRemote(form);
-        return false;
-
-      } else {
-        // slight timeout so that the submit button gets properly serialized
-        setTimeout(function(){ rails.disableFormElements(form); }, 13);
-      }
-    });
-
-    $document.delegate(rails.formInputClickSelector, 'click.rails', function(event) {
-      var button = $(this);
-
-      if (!rails.allowAction(button)) return rails.stopEverything(event);
-
-      // register the pressed submit button
-      var name = button.attr('name'),
-        data = name ? {name:name, value:button.val()} : null;
-
-      button.closest('form').data('ujs:submit-button', data);
-    });
-
-    $document.delegate(rails.formSubmitSelector, 'ajax:send.rails', function(event) {
-      if (this == event.target) rails.disableFormElements($(this));
-    });
-
-    $document.delegate(rails.formSubmitSelector, 'ajax:complete.rails', function(event) {
-      if (this == event.target) rails.enableFormElements($(this));
-    });
-
-    $(function(){
-      rails.refreshCSRFTokens();
-    });
-  }
-
-})( jQuery );
-$(document).ready(function() {
-
-
-	var URL = $(this).context.URL
-	$.each($('.milestone'), function(index, value){
-		var attribute = value.id
-	
-	$("#" + value.id).on('click', function() {
-	  var checked; 
-	  if ($(this).is(':checked')) {
-	    checked = true;
-	  } else {
-	    checked = false;
-	  } 
-
-	  var data = {id: $(this).data('project_id')};
-		data[attribute] = checked;
-
-	  $.ajax({
-	      type: "GET",
-	      url: URL + "/edit",
-	      data: data
-	   });     
-		});
-	});
-});
-
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//
-// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
-// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
-//
-// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
-// compiled file.
-//
-// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
-// about supported directives.
-//
-
-
-
-
-console.log("Hells yeah! The dashboard has started!");
-
-Dashing.on('ready', function() {
-  var contentWidth;
-  Dashing.widget_margins || (Dashing.widget_margins = [5, 5]);
-  Dashing.widget_base_dimensions || (Dashing.widget_base_dimensions = [300, 360]);
-  Dashing.numColumns || (Dashing.numColumns = 5);
-  contentWidth = (Dashing.widget_base_dimensions[0] + Dashing.widget_margins[0] * 2) * Dashing.numColumns;
-  return Batman.setImmediate(function() {
-    $('.gridster').width(contentWidth);
-    return $('.gridster ul:first').gridster({
-      widget_margins: Dashing.widget_margins,
-      widget_base_dimensions: Dashing.widget_base_dimensions,
-      avoid_overlapped_widgets: !Dashing.customGridsterLayout,
-      draggable: {
-        stop: Dashing.showGridsterInstructions,
-        start: function() {
-          return Dashing.currentWidgetPositions = Dashing.getWidgetPositions();
-        }
-      }
-    });
-  });
-});
-
-
-describe ('Countdown', function() {
-
-  var clock;
-
-  beforeEach (function() {
-    clock = new Dashing.Countdown;
-  });
-
-  it("has a test", function() {
-    expect(1 + 1).toBe(2);
-  });
-
-  it("can generate a new clock", function() {
-    expect(clock.truth()).toBe(true);
-  });
-
-  it("has a current time", function() {
-    var now = new Date()
-    expect(clock.currentTime()).toEqual(now)
-  });
-
-  it("has a hardcoded end time", function() {
-    clock.endTime()
-    expect(clock.endTime()).toEqual('Fri Dec 05 2014 17:00:00 GMT+0000 (GMT)')
-  });
-
-
-
-});
 
