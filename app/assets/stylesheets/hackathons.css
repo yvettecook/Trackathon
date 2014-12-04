@@ -86,16 +86,6 @@
 		font-size: 15px;
 	}
 
-#submit {
-  background-color: #eb9c3c;
-}
-
-	input {
-		height: 40px;
-		width: 220px;
-		font-size: 25px;
-		padding-right: 10px;
-	}
 
 	input[type=submit] {
 	  -webkit-border-radius: 0;
@@ -108,9 +98,11 @@
 	  padding: 12px 17px 16px 20px;
 	  border: solid #050505 1px;
 	  text-decoration: none;
+	  margin-top: 10px;
 	}
 
 	input[type=submit]:hover {
 	  background: #ab3321;
 	  text-decoration: none;
 	}
+

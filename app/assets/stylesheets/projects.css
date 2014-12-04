@@ -7,18 +7,19 @@
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #12b0c5;
+  background-color: #eb9c3c;
 }
 
   #new_project {
-    
     margin: 0;
     padding: 0;
+    padding-left: 15px;
     vertical-align: middle;
     display: table-cell;
     font-weight: 700;
     text-align: center;
     height: 240px;
+    padding-left: 15px;
   }
 
 /*  SECTIONS  */
@@ -42,3 +43,59 @@ input.milestone
   height: 30px;
 }
 
+input#project_gitrepo {
+  width: 470px;
+}
+
+input#create {
+  margin-left: 10px;
+  margin-top: 1px;
+}
+
+#submit {
+  background-color: #eb9c3c;
+}
+
+  input {
+    height: 40px;
+    width: 220px;
+    font-size: 25px;
+    padding-right: 10px;
+  }
+
+  input[type=submit] {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #ffffff;
+    height: 46px;
+    font-size: 20px;
+    background: #dc5945;
+    padding: 12px 17px 16px 20px;
+    border: solid #050505 1px;
+    text-decoration: none;
+  }
+
+  input[type=submit]:hover {
+    background: #ab3321;
+    text-decoration: none;
+  }
+
+
+   a#github_link {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0px;
+    color: #ffffff;
+    height: 46px;
+    font-size: 20px;
+    background: #eb9c3c;
+    padding: 12px 17px 16px 20px;
+    border: solid #050505 1px;
+    text-decoration: none;
+  }
+
+  a#github_link:hover {
+    background: #A2BF4B;
+  }
+}
