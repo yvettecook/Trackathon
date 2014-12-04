@@ -11,7 +11,6 @@
 }
 
   #new_project {
-    
     margin: 0;
     padding: 0;
     padding-left: 15px;
@@ -20,6 +19,7 @@
     font-weight: 700;
     text-align: center;
     height: 240px;
+    padding-left: 15px;
   }
 
 /*  SECTIONS  */
@@ -99,7 +99,4 @@ input#create {
   a#github_link:hover {
     background: #A2BF4B;
   }
-
-
-
-
+}
