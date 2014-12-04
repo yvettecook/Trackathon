@@ -3,7 +3,7 @@
     <h1><img src="./images/Trackathon_logo.png"></h1>
   </div>
   <div class="col span_2_of_5" id="new_hackathon">
-    <h2>Start Tracking Your Own Hackathon</h2>
+    <h2>Start Tracking Your <br> Own Hackathon</h2><br>
     <%= link_to 'New Hackathon', new_hackathon_path, class: "new_hackathon_tile" %>
   </div>
 </div>
@@ -17,7 +17,7 @@
   <% if @hackathons.any? %>
     <% @hackathons.each do |hackathon| %>
       <div class="col span_1_of_5" id="hackathon">
-       <%= link_to "#{hackathon.name}", hackathon_path(hackathon), class: "hackathon" %> 
+       <%= link_to "#{hackathon.name}", hackathon_path(hackathon), class: "hackathon" %>
       </div>
     <% end %>
   <% end %>

@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -87,11 +86,13 @@
   position: relative;
   display: table-cell;
   text-align: center;
+  vertical-align: middle;
   font-size: 20px;
 }
 
   h3 {
-    margin-top: 30%;
+    margin-top: 45%;
+    margin-bottom: 0;
     font-weight: 400;
     opacity: 0.9;
   }
@@ -121,21 +122,6 @@
 
 #presentation_tile {
   background-color: #A2BF4B;
-}
-
-/*  ICON BACKGROUND  */
-
-.icon-background {
-  pointer-events: none;
-  width: 100%!important;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  font-size: 5px;
-  text-align: center;
-  margin-top: 5px;
 }
 
 /*  GROUPING  */
@@ -322,30 +308,6 @@ pgrid
   font-family: 'Open Sans', sans-serif;
   color: white;
 }
-
-.new_hackathon_tile_h2 {
-  padding-bottom: 40px;
-}
-
-
-.new_hackathon_tile {
-  height: 40px;
-  width: 220px;
-  font-size: 25px;
-  padding-right: 10px;
-  border-radius: 0px;
-  color: #ffffff;
-  font-size: 20px;
-  background: #9c4274;
-  padding: 12px 17px 16px 20px;
-  border: solid #050505 1px;
-  text-decoration: none;
-}
-
-  .new_hackathon_tile:hover {
-    background: #662B4C;
-    text-decoration: none;
-
   h2{
     font-weight: 400;
     font-size: 30px;
@@ -374,7 +336,7 @@ pgrid
     color: white;
   }
 
-  form#new_user.new_user {
+    form#new_user.new_user {
     margin-top: 20px;
   }
 
