@@ -29,18 +29,18 @@
 }
 
 #title {
-  background-color: #00C176;
+  background-color: #12b0c5;
 }
 
 	h2 {
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
-	font-weight: 700;
 	}
 
 #new_hackathon {
-  background-color: #FF003C;
+  background-color: #12b0c5;
+  font-size: 20px;
 }
 
 	#new_hackathon.new_hackathon {
@@ -50,24 +50,67 @@
 		display: table-cell;
 	}
 
+	input#hackathon_name {
+		height: 40px;
+		width: 220px;
+		font-size: 25px;
+	}
+
+	select#hackathon_end_time_1i {
+		height: 30px;
+		width: 70px;
+		font-size: 15px;
+	}
+
+	select#hackathon_end_time_2i {
+		height: 30px;
+		width: 110px;
+		font-size: 15px;
+	}
+
+	select#hackathon_end_time_3i {
+		height: 30px;
+		width: 50px;
+		font-size: 15px;
+	}
+
+	select#hackathon_end_time_4i {
+		height: 30px;
+		width: 50px;
+		font-size: 15px;
+	}
+
+	select#hackathon_end_time_5i {
+		height: 30px;
+		width: 50px;
+		font-size: 15px;
+	}
+
 #submit {
-  background-color: #F4B607;
+  background-color: #eb9c3c;
 }
 
+	input {
+		height: 40px;
+		width: 220px;
+		font-size: 25px;
+		padding-right: 10px;
+	}
+
 	input[type=submit] {
-		margin-top: 50%;
 	  -webkit-border-radius: 0;
 	  -moz-border-radius: 0;
 	  border-radius: 0px;
 	  color: #ffffff;
+	  height: 46px;
 	  font-size: 20px;
-	  background: #88C100;
-	  padding: 16px 17px 16px 20px;
+	  background: #dc5945;
+	  padding: 12px 17px 16px 20px;
 	  border: solid #050505 1px;
 	  text-decoration: none;
-}
+	}
 
 	input[type=submit]:hover {
-	  background: #186629;
+	  background: #ab3321;
 	  text-decoration: none;
 	}

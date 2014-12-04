@@ -1,24 +1,25 @@
 /* WHOLE FORM */
 
 #new_project {
+  height: 240px;
   box-sizing: border-box;
-  height: 300px;
   display: table;
   text-align: center;
   font-family: 'Open Sans', sans-serif;
   color: white;
-  background-color: #FF003C;
+  background-color: #12b0c5;
 }
 
-  #new_project.new_project {
+  #new_project {
+    
     margin: 0;
     padding: 0;
     vertical-align: middle;
     display: table-cell;
     font-weight: 700;
     text-align: center;
+    height: 240px;
   }
-
 
 /*  SECTIONS  */
 .section {
