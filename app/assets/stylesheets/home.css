@@ -19,7 +19,7 @@
 
 /* TILE STYING */
 
-#welcome_tile, #hackathon, #team {
+#welcome_tile, #hackathon, #team, #about, #members {
   box-sizing: border-box;
   height: 240px;
   display: table;
@@ -28,7 +28,7 @@
   color: white;
 }
 
-#welcome_tile {
+#welcome_tile, #about {
   background-color: #662B4C;
 }
 
@@ -40,8 +40,12 @@
     font-weight: 400;
   }
 
-#new_hackathon {
+#new_hackathon, #members {
   background-color: #dc5945;
+}
+
+#members, #about {
+	height: 375px;
 }
 	
 	.new_hackathon_tile_h2 {
@@ -158,3 +162,20 @@
 	margin: 0 0 0 0;
 }
 
+.about_link {
+  text-decoration: none;
+  color: white;
+  opacity: .75;
+  font-size: 18px;
+}
+
+.about_link:hover {
+	opacity: 1;
+	font-size: 19px;
+}
+
+#about_text {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
