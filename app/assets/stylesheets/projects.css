@@ -10,15 +10,16 @@
   background-color: #12b0c5;
 }
 
-  #new_project.new_project {
+  #new_project {
+    
     margin: 0;
     padding: 0;
     vertical-align: middle;
     display: table-cell;
     font-weight: 700;
     text-align: center;
+    height: 240px;
   }
-
 
 /*  SECTIONS  */
 .section {

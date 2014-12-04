@@ -300,7 +300,11 @@ pgrid
     box-sizing: border-box;
     border-bottom: 1px solid #fb998c;
   }
+}
 
+#sign_up {
+  font-family: 'Open Sans', sans-serif;
+  color: white;
 }
 
 .new_hackathon_tile_h2 {
@@ -325,4 +329,31 @@ pgrid
   .new_hackathon_tile:hover {
     background: #662B4C;
     text-decoration: none;
+
+  h2{
+    font-weight: 400;
+    font-size: 30px;
+    color: white;
+    opacity: 0.7;
+    margin-top: 50px;
+  }
+
+  #title {
+    background-color: #9c4274;
+  }
+
+  #form {
+    background-color: #eb9c3c;
+    height: 240px;
+    font-size: 20px;
+  }
+
+  #links {
+    background-color: #A2BF4B;
+    height: 240px;
+  }
+
+  #sign_in {
+    font-family: 'Open Sans', sans-serif;
+    color: white;
   }
