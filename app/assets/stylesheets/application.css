@@ -10,7 +10,6 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -79,6 +78,10 @@
   background-color: #dc5945;
 }
 
+#project-description h2 {
+  margin-top: 10px
+}
+
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
   box-sizing: border-box;
   height: 240px;
@@ -118,26 +121,11 @@
 }
 
 #backdev_tile {
-  background-color: #12b0c5;
+  background-color: #46bbb3;
 }
 
 #presentation_tile {
   background-color: #A2BF4B;
-}
-
-/*  ICON BACKGROUND  */
-
-.icon-background {
-  pointer-events: none;
-  width: 100%!important;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0.1;
-  font-size: 5px;
-  text-align: center;
-  margin-top: 5px;
 }
 
 /*  GROUPING  */
@@ -153,7 +141,7 @@
     zoom:1; /* For IE 6/7 */
 }
 
-pgrid
+/*pgrid*/
 /*  GRID OF FIVE  */
 .span_5_of_5 {
 	width: 100%;
@@ -347,7 +335,55 @@ pgrid
     height: 240px;
   }
 
+  #links a {
+    color: #ffffff;
+    font-size: 18px;
+    background: #eb9c3c;
+    padding: 5px 5px 5px 5px;
+    border: solid #050505 1px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+  }
+
   #sign_in {
     font-family: 'Open Sans', sans-serif;
     color: white;
+  }
+
+    form#new_user.new_user {
+    margin-top: 20px;
+  }
+
+  input#user_remember_me {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 20px;
+    height: 20px;
+  }
+
+  input#user_email {
+    width: 500px;
+  }
+
+  input#user_password {
+    margin-top: 10px;
+    width: 500px;
+  }
+
+   input#user_password_confirmation {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 500px;
+  }
+
+  .create_hackathon {
+    margin-top: 98px;
+  }
+
+  input[placeholder] {
+    padding-left: 10px;
   }

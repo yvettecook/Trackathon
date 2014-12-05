@@ -7,11 +7,11 @@
   <div class="col span_3_of_5" id="form">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field">
-      <%= f.email_field :email, autofocus: true, placeholder: :email %>
+      <%= f.email_field :email, autofocus: true, placeholder: :Email %>
     </div>
 
     <div class="field">
-      <%= f.password_field :password, autocomplete: "off", placeholder: :password %>
+      <%= f.password_field :password, autocomplete: "off", placeholder: :Password %>
     </div>
 
     <% if devise_mapping.rememberable? -%>
@@ -29,7 +29,7 @@
   </div>
 
   <div class="col span_1_of_5" id="links">
-    <%= render "devise/shared/links" %>
+    <%= render "devise/shared/links"  %>
   </div>
 
 </div>

@@ -1,6 +1,4 @@
-// Place all the styles related to the hackathons controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
 
 /*  SECTIONS  */
 .section {
@@ -86,16 +84,6 @@
 		font-size: 15px;
 	}
 
-#submit {
-  background-color: #eb9c3c;
-}
-
-	input {
-		height: 40px;
-		width: 220px;
-		font-size: 25px;
-		padding-right: 10px;
-	}
 
 	input[type=submit] {
 	  -webkit-border-radius: 0;
@@ -108,9 +96,14 @@
 	  padding: 12px 17px 16px 20px;
 	  border: solid #050505 1px;
 	  text-decoration: none;
+
 	}
 
 	input[type=submit]:hover {
 	  background: #ab3321;
 	  text-decoration: none;
+	}
+
+.create_hackathon {
+		margin-top: 40%;
 	}
