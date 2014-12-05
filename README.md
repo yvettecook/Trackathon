@@ -1,8 +1,8 @@
-# Trackathon
-#### *A simply dashing way to track hackathons*
+![Trackathon](https://s3.amazonaws.com/uploads.hipchat.com/119067/1212857/vNc0XILVe2fKftp/Trackathon.png)
+### *A simply dashing way to track hackathons*
 Check it out at [dashing-trackathon.herokuapp.com](http://dashing-trackathon.herokuapp.com/)
 
-[Screenshot of Dashboard]
+![Screenshot of Dashboard](https://s3.amazonaws.com/uploads.hipchat.com/119067/1211572/S2dXxe41XTbfPdD/Screen%20Shot%202014-12-05%20at%2011.34.52%20%282%29.png)
 
 ### The Story behind Trackathon
 On September 15th, 2014, the creators of Trackathon jumped straight into the deep end of the coding pool by starting their first day at [Maker's Academy](www.makersacademy.com). Ten weeks (and more technologies than we care to list) later, final project time rolled around. Makers' brave students were presented with many potential challenges, including that of providing a tool for tracking teams' progress throughout the course of a hackathon. Five unlikely heroes rose to that challenge, persevering through many coding hardships. After two weeks of blood, sweat, tears, and many cans of Pringles, our team is proud to unleash Trackathon upon the world.
