@@ -17,6 +17,8 @@ Want to track your own hackathon? Go to the [site](http://dashing-trackathon.her
 * Victoria Barr: [barr-code](https://github.com/barr-code)
 * Yvette Cook: [yvettecook](https://github.com/yvettecook)
 
+![teamhigh-fives](https://s3.amazonaws.com/uploads.hipchat.com/119067/1212438/nA2DydJoswfWsIH/IMG_0172.JPG)
+
 # Tools
 
 *Languages:*
