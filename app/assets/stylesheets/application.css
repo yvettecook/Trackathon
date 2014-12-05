@@ -331,6 +331,20 @@ pgrid
     height: 240px;
   }
 
+  #links a {
+    color: #ffffff;
+    font-size: 18px;
+    background: #eb9c3c;
+    padding: 5px 5px 5px 5px;
+    border: solid #050505 1px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+  }
+
   #sign_in {
     font-family: 'Open Sans', sans-serif;
     color: white;

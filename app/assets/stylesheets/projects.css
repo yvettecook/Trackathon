@@ -99,3 +99,7 @@ input#create {
     background: #A2BF4B;
   }
 }
+
+.title_tile h2 {
+  margin-bottom: 20px;
+}
