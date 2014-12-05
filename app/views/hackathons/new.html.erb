@@ -9,12 +9,12 @@
 <div class="section group">
 		<div class="col span_4_of_5" id="new_hackathon">
 			<%= form_for Hackathon.new, html: {multipart: true} do |f| %> <!-- should be @hackathon -->
-			<%= f.text_field :name, placeholder: :'Hackathon name' %></br></br>
+			<%= f.text_field :name, placeholder: :'Hackathon Name' %></br></br>
 			<%= f.label :end_time %>
 			<%= f.datetime_select :end_time %>
 		</div>
 		<div class="col span_1_of_5" id="submit">
-			<%= f.submit %>
+			<%= f.submit :class => "create_hackathon" %>
 		</div>
 	<% end %>
 </div>

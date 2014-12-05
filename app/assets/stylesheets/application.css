@@ -78,6 +78,10 @@
   background-color: #dc5945;
 }
 
+#project-description h2 {
+  margin-top: 10px
+}
+
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
   box-sizing: border-box;
   height: 240px;
@@ -137,7 +141,7 @@
     zoom:1; /* For IE 6/7 */
 }
 
-pgrid
+/*pgrid*/
 /*  GRID OF FIVE  */
 .span_5_of_5 {
 	width: 100%;
@@ -374,4 +378,12 @@ pgrid
     margin-top: 10px;
     margin-bottom: 10px;
     width: 500px;
+  }
+
+  .create_hackathon {
+    margin-top: 98px;
+  }
+
+  input[placeholder] {
+    padding-left: 10px;
   }

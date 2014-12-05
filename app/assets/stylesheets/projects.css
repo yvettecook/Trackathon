@@ -101,8 +101,6 @@ input#create {
 
 #title_tile p {
   color: #ffffff;
+  margin-bottom: 30px;
 }
 
-.title_tile h2 {
-  margin-bottom: 20px;
-}
