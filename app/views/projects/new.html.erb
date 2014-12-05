@@ -7,8 +7,8 @@
 <div class="section group">
   <div class="col span_5_of_5" id="new_project">
       <%= form_for [@hackathon, @project] do |f| %>
-      <%= f.text_field :name, placeholder: :name %>
-      <%= f.text_field :description, placeholder: :description %>
+      <%= f.text_field :name, placeholder: :Name %>
+      <%= f.text_field :description, placeholder: :Description %>
       <%= f.text_field :gitrepo, placeholder: :'https://github.com/Octocat/example' %>
       <%= f.submit "Create", :id => 'create' %>
     <% end %>

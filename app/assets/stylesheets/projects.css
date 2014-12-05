@@ -98,3 +98,8 @@ input#create {
   a#github_link:hover {
     background: #A2BF4B;
   }
+
+#title_tile p {
+  color: #ffffff;
+  margin-bottom: 30px;
+}

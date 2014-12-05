@@ -78,6 +78,10 @@
   background-color: #dc5945;
 }
 
+#project-description h2 {
+  margin-top: 10px
+}
+
 #product_tile, #design_tile, #frontdev_tile, #backdev_tile, #presentation_tile {
   box-sizing: border-box;
   height: 240px;
@@ -117,7 +121,7 @@
 }
 
 #backdev_tile {
-  background-color: #12b0c5;
+  background-color: #46bbb3;
 }
 
 #presentation_tile {
@@ -137,7 +141,7 @@
     zoom:1; /* For IE 6/7 */
 }
 
-pgrid
+/*pgrid*/
 /*  GRID OF FIVE  */
 .span_5_of_5 {
 	width: 100%;
@@ -331,6 +335,20 @@ pgrid
     height: 240px;
   }
 
+  #links a {
+    color: #ffffff;
+    font-size: 18px;
+    background: #eb9c3c;
+    padding: 5px 5px 5px 5px;
+    border: solid #050505 1px;
+    text-decoration: none;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    height: 30px;
+    display: inline-block;
+  }
+
   #sign_in {
     font-family: 'Open Sans', sans-serif;
     color: white;
@@ -360,4 +378,12 @@ pgrid
     margin-top: 10px;
     margin-bottom: 10px;
     width: 500px;
+  }
+
+  .create_hackathon {
+    margin-top: 98px;
+  }
+
+  input[placeholder] {
+    padding-left: 10px;
   }
