@@ -12,7 +12,17 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
 
-  config.omniauth :github, Rails.application.secrets.GITHUB_ID, Rails.application.secrets.GITHUB_SECRET
+  if Rails.env.development?
+    config.omniauth :github,
+    Rails.application.secrets.GITHUB_ID,
+    Rails.application.secrets.GITHUB_SECRET
+  end
+
+  if Rails.env.production?
+    config.omniauth :github,
+    ENV['GITHUB_ID'],
+    ENV['GITHUB_SECRET']
+  end
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
