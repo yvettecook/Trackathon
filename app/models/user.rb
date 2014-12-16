@@ -8,23 +8,31 @@ class User < ActiveRecord::Base
     user = signed_in_resource || User.where(:provider => auth.provider, :uid => auth.uid).first
      	unless user
      		if auth.info.email
-			   user = User.create(
-				   provider: 	auth.provider,
-				   uid: 			auth.uid,
-				   email: 		auth.info.email ,
-				   password: 	Devise.friendly_token[0,20]
-			 		)
+          create_user_with_email
 				else
-					user = User.create(
-						provider: 	auth.provider,
-				   	uid: 				auth.uid,
-				   	email: 			(((1..15).map {("A".."Z").to_a.sample}.join) + "@github.com"),
-				   	password: 	Devise.friendly_token[0,20]
-			 		)
+					create_user_with_mock_email
 				end
 			end
 		user
 	end
+
+  def create_user_with_email
+    user = User.create(
+    provider: 	auth.provider,
+    uid: 			auth.uid,
+    email: 		auth.info.email ,
+    password: 	Devise.friendly_token[0,20]
+    )
+  end
+
+  def create_user_with_mock_email
+    user = User.create(
+    provider: 	auth.provider,
+    uid: 				auth.uid,
+    email: 			(((1..15).map {("A".."Z").to_a.sample}.join) + "@github.com"),
+    password: 	Devise.friendly_token[0,20]
+    )
+  end
 
 	def self.new_with_session(params, session)
     super.tap do |user|
