@@ -1,3 +1,5 @@
+[![Code Climate](https://codeclimate.com/github/yvettecook/Trackathon/badges/gpa.svg)](https://codeclimate.com/github/yvettecook/Trackathon)
+
 ![Trackathon](https://s3.amazonaws.com/uploads.hipchat.com/119067/1212857/vNc0XILVe2fKftp/Trackathon.png)
 ### *A simply dashing way to track hackathons*
 Check it out at [dashing-trackathon.herokuapp.com](http://dashing-trackathon.herokuapp.com/)
